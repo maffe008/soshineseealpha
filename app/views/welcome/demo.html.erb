@@ -7,11 +7,11 @@
             <a class="panel-title" data-toggle="collapse" data-parent="#panel-968422" href="#panel-element-350931">北航</a>
           </div>
           <div id="panel-element-350931" class="panel-collapse collapse in">
-            <div class="panel-body">
-              新主楼
+            <div id="block_A_1" class="panel-body">
+              <a href="#">新主楼</a>
             </div>
-            <div class="panel-body">
-              老教学区
+            <div id="block_A_2" class="panel-body">
+              <a href="#">老教学区</a>
             </div>
             <div class="panel-body">
               体育馆游泳馆
@@ -38,6 +38,7 @@
             <div class="panel-body">
               世宁大厦
             </div>
+
             <div class="panel-body">
               学院国际大厦
             </div>
@@ -49,12 +50,11 @@
       </div>
       <div class="alert alert-dismissable alert-info">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <h4>
-          地块信息
-        </h4> <strong>地块名称</strong></br>
-        </h4> 作物信息</br>
-        </h4> 时间信息</br>
-        </h4> 坐标信息</br>
+        <h4>地块信息</h4>
+        <h5 id="blockname"> <strong>地块名称</strong><br> </h5>
+        <h5> 作物信息<br> </h5>
+        <h5> 时间信息<br> </h5>
+        <h5> 坐标信息<br> </h5>
       </div>
     </div>
     <div class="col-md-10 column">
@@ -69,6 +69,45 @@
           <a class="btn btn-primary btn-large" href="#">Learn more</a>
         </p>
       </div>
+      <ul class="pagination pagination-sm">
+        <li>
+          <a href="#">201509</a>
+        </li>
+        <li>
+          <a href="#">201511</a>
+        </li>
+        <li>
+          <a href="#">201601</a>
+        </li>
+        <li>
+          <a href="#">201603</a>
+        </li>
+        <li>
+          <a href="#">201605</a>
+        </li>
+        <li>
+          <a href="#">201607</a>
+        </li>
+        <li>
+          <a href="#">201609</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
+<script>
+  $(function () {
+    $('#block_A_1').on('click', function () {
+      $('#blockname').text("新主楼")})
+  });
+  $(function () {
+    $('#block_A_2').on('click', function () {
+      $('#blockname').text("老教学区")})
+  });
+
+  $(function () {
+
+  });
+
+
+</script>
