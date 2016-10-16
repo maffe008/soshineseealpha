@@ -6,7 +6,7 @@ $(function(){
         $('#blockname').text($('#block_A_1').text());
         $('#corpinfo').text("实验室学生");
         $('#timeinfo').text("2016/09/15");
-        $('#locinfo').text("000,111")
+        $('#locinfo').text("000,123")
     });
     $('#block_A_2').mouseover(function(){
         $('#blockname').text($('#block_A_2').text())
@@ -65,65 +65,11 @@ $(function(){
 })
 
 $(function(){
-    $('#block_A_1').mouseenter(function(){
+    $('.panel-body').mouseenter(function(){
         $(this).css({'background-color':'lightblue'})
     })
-    $('#block_A_1').mouseleave(function(){
+    $('.panel-body').mouseleave(function(){
         $(this).css({'background-color':'white'})
     })
 
-    $('#block_A_2').mouseover(function(){
-        $('#blockname').text($('#block_A_2').text());
-        $('#corpinfo').text("上课学生");
-        $('#timeinfo').text("2016/09/20");
-        $('#locinfo').text("001,112")
-    })
-    $('#block_A_3').mouseover(function(){
-        $('#blockname').text($('#block_A_3').text())
-        $('#corpinfo').text("运动学生")
-        $('#timeinfo').text("2016/09/10")
-        $('#locinfo').text("233,666")
-    })
-    $('#block_A_4').mouseover(function(){
-        $('#blockname').text($('#block_A_4').text())
-        $('#corpinfo').text("减肥学生")
-        $('#timeinfo').text("2016/09/02")
-        $('#locinfo').text("517,517")
-    })
-    $('#block_A_5').mouseover(function(){
-        $('#blockname').text($('#block_A_5').text())
-        $('#corpinfo').text("休息学生")
-        $('#timeinfo').text("2016/09/30")
-        $('#locinfo').text("999,999")
-    })
-    $('#block_A_6').mouseover(function(){
-        $('#blockname').text($('#block_A_6').text())
-        $('#corpinfo').text("回寝学生")
-        $('#timeinfo').text("2016/09/01")
-        $('#locinfo').text("123,456")
-    })
-    $('#block_B_1').mouseover(function(){
-        $('#blockname').text($('#block_B_1').text())
-        $('#corpinfo').text("决策层")
-        $('#timeinfo').text("2016/10/01")
-        $('#locinfo').text("888,888")
-    })
-    $('#block_B_2').mouseover(function(){
-        $('#blockname').text($('#block_B_2').text())
-        $('#corpinfo').text("首欣科技")
-        $('#timeinfo').text("2016/10/02")
-        $('#locinfo').text("175,666")
-    })
-    $('#block_B_3').mouseover(function(){
-        $('#blockname').text($('#block_B_3').text())
-        $('#corpinfo').text("首欣教育")
-        $('#timeinfo').text("2016/10/03")
-        $('#locinfo').text("173,666")
-    })
-    $('#block_B_4').mouseover(function(){
-        $('#blockname').text($('#block_B_4').text())
-        $('#corpinfo').text("首欣集团")
-        $('#timeinfo').text("2016/10/08")
-        $('#locinfo').text("666,666")
-    })
 })

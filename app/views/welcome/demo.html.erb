@@ -10,7 +10,7 @@
     <!--侧边栏-->
     <div class="col-md-2 column">
       <!--侧边栏|折叠-->
-      <div class="panel-group" id="panel-968422">
+      <div class="panel-group" id="panel-100">
         <div class="panel panel-default">
           <div class="panel-primary">
             <div class="panel-heading">
@@ -18,11 +18,11 @@
             </div>
           </div>
           <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-968422" href="#panel-element-350931">北航</a>
+            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100" href="#panel-element-101">北航</a>
           </div>
-          <div id="panel-element-350931" class="panel-collapse collapse in">
+          <div id="panel-element-101" class="panel-collapse collapse in">
             <div id="block_A_1" class="panel-body">
-              新主楼
+              新主楼		<input type="button" onclick="add_overlay();" value="添加覆盖物" />
             </div>
             <div id="block_A_2" class="panel-body">
               老教学区
@@ -43,9 +43,9 @@
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-968422" href="#panel-element-253919">首欣集团</a>
+            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100" href="#panel-element-102">首欣集团</a>
           </div>
-          <div id="panel-element-253919" class="panel-collapse collapse">
+          <div id="panel-element-102" class="panel-collapse collapse">
             <div id="block_B_1" class="panel-body">
               旺座
             </div>
@@ -61,29 +61,43 @@
             </div>
           </div>
         </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100" href="#panel-element-103">天伦集团</a>
+          </div>
+          <div id="panel-element-103" class="panel-collapse collapse">
+            <div id="block_C_1" class="panel-body">
+              上兴镇
+            </div>
+            <div id="block_C_2" class="panel-body">
+              溧阳市
+            </div>
+          </div>
+        </div>
       </div>
 
       <!--侧边栏|信息-->
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">地块信息</h3>
-        </div>
-        <div class="panel-body">
-          <h5 id="blockname"> <strong></strong><br> </h5>
-          <h5 id="corpinfo"> <br> </h5>
-          <h5 id="timeinfo"> <br> </h5>
-        </div>
-        <div class="panel-footer">
-          <h5 id="locinfo"> <br> </h5>
+      <div class="info">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">地块信息</h3>
+          </div>
+          <div class="panel-body">
+            <h5 id="blockname"> <br> </h5>
+            <h5 id="corpinfo"> <br> </h5>
+            <h5 id="timeinfo"> <br> </h5>
+          </div>
+          <div class="panel-footer">
+            <h5 id="locinfo"> <br> </h5>
+          </div>
         </div>
       </div>
-
-      <!--侧边栏|logo-->
 
 
     </div>
     <!--主体-->
     <div class="col-md-10 column">
+      <!--地图-->
       <div class="jumbotron">
         <div id="demomap">
           <div id="allmap">
@@ -92,30 +106,19 @@
         </div>
 
       </div>
+      <!--日期-->
+      <div class="btn-group btn-group-sm">
+        <button class="btn btn-default" type="button"><em ></em> 201603</button>
+        <button class="btn btn-default" type="button"><em ></em> 201604</button>
+        <button class="btn btn-default" type="button"><em ></em> 201605</button>
+        <button class="btn btn-default" type="button"><em ></em> 201606</button>
+        <button class="btn btn-default" type="button"><em ></em> 201607</button>
+        <button class="btn btn-default" type="button"><em ></em> 201608</button>
+        <button class="btn btn-default" type="button"><em ></em> 201609</button>
+        <button class="btn btn-default" type="button"><em ></em> 201610</button>
+      </div>
 
-      <ul class="pagination pagination-sm">
-        <li>
-          <a href="#">201509</a>
-        </li>
-        <li>
-          <a href="#">201511</a>
-        </li>
-        <li>
-          <a href="#">201601</a>
-        </li>
-        <li>
-          <a href="#">201603</a>
-        </li>
-        <li>
-          <a href="#">201605</a>
-        </li>
-        <li>
-          <a href="#">201607</a>
-        </li>
-        <li>
-          <a href="#">201609</a>
-        </li>
-      </ul>
+
     </div>
   </div>
 </div>
@@ -127,4 +130,25 @@
   map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
   map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
   map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+  map.addEventListener("click",function(e){
+    alert(e.point.lng + "," + e.point.lat);
+  });
+  var pStart = new BMap.Point(116.357064,39.987036);
+  var pEnd = new BMap.Point(116.35983,39.985198);
+  var rectangle = new BMap.Polygon([
+    new BMap.Point(pStart.lng,pStart.lat),
+    new BMap.Point(pEnd.lng,pStart.lat),
+    new BMap.Point(pEnd.lng,pEnd.lat),
+    new BMap.Point(pStart.lng,pEnd.lat)
+  ], {strokeColor:"grey", strokeWeight:1, strokeOpacity:0.5});  //创建矩形
+
+  //添加覆盖物
+  function add_overlay(){
+    //map.addOverlay(marker);            //增加点
+    //map.addOverlay(polyline);          //增加折线
+    //map.addOverlay(circle);            //增加圆
+    //map.addOverlay(polygon);           //增加多边形
+    map.addOverlay(rectangle);         //增加矩形
+    map.centerAndZoom(new BMap.Point(116.357064,39.987036),18);
+  }
 </script>
