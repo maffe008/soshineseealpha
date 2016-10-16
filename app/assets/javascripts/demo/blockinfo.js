@@ -6,61 +6,74 @@ $(function(){
         $('#blockname').text($('#block_A_1').text());
         $('#corpinfo').text("实验室学生");
         $('#timeinfo').text("2016/09/15");
-        $('#locinfo').text("000,123")
+        $('#locinfo').text("116.356951,39.986874")
     });
+
     $('#block_A_2').mouseover(function(){
         $('#blockname').text($('#block_A_2').text())
         $('#corpinfo').text("上课学生")
         $('#timeinfo').text("2016/09/20")
-        $('#locinfo').text("001,112")
+        $('#locinfo').text("116.356102,39.990951")
     })
     $('#block_A_3').mouseover(function(){
         $('#blockname').text($('#block_A_3').text())
         $('#corpinfo').text("运动学生")
         $('#timeinfo').text("2016/09/10")
-        $('#locinfo').text("233,666")
+        $('#locinfo').text("116.354674,39.986639")
     })
     $('#block_A_4').mouseover(function(){
         $('#blockname').text($('#block_A_4').text())
         $('#corpinfo').text("减肥学生")
         $('#timeinfo').text("2016/09/02")
-        $('#locinfo').text("517,517")
+        $('#locinfo').text("116.351642,39.986853")
     })
     $('#block_A_5').mouseover(function(){
         $('#blockname').text($('#block_A_5').text())
         $('#corpinfo').text("休息学生")
         $('#timeinfo').text("2016/09/30")
-        $('#locinfo').text("999,999")
+        $('#locinfo').text("116.350802,39.991808")
     })
     $('#block_A_6').mouseover(function(){
         $('#blockname').text($('#block_A_6').text())
         $('#corpinfo').text("回寝学生")
         $('#timeinfo').text("2016/09/01")
-        $('#locinfo').text("123,456")
+        $('#locinfo').text("116.348197,39.984")
     })
     $('#block_B_1').mouseover(function(){
         $('#blockname').text($('#block_B_1').text())
         $('#corpinfo').text("决策层")
         $('#timeinfo').text("2016/10/01")
-        $('#locinfo').text("888,888")
+        $('#locinfo').text("116.464402,39.921089")
     })
     $('#block_B_2').mouseover(function(){
         $('#blockname').text($('#block_B_2').text())
         $('#corpinfo').text("首欣科技")
         $('#timeinfo').text("2016/10/02")
-        $('#locinfo').text("175,666")
+        $('#locinfo').text("116.358303,39.991833")
     })
     $('#block_B_3').mouseover(function(){
         $('#blockname').text($('#block_B_3').text())
         $('#corpinfo').text("首欣教育")
         $('#timeinfo').text("2016/10/03")
-        $('#locinfo').text("173,666")
+        $('#locinfo').text("116.359327,39.983627")
     })
     $('#block_B_4').mouseover(function(){
         $('#blockname').text($('#block_B_4').text())
         $('#corpinfo').text("首欣集团")
         $('#timeinfo').text("2016/10/08")
-        $('#locinfo').text("666,666")
+        $('#locinfo').text("116.357144,39.983548")
+    })
+    $('#block_C_1').mouseover(function(){
+        $('#blockname').text($('#block_C_1').text())
+        $('#corpinfo').text("活性炭厂")
+        $('#timeinfo').text("2016/10/08")
+        $('#locinfo').text("119.264317,31.565538")
+    })
+    $('#block_C_2').mouseover(function(){
+        $('#blockname').text($('#block_C_2').text())
+        $('#corpinfo').text("天伦办公室")
+        $('#timeinfo').text("2016/10/08")
+        $('#locinfo').text("119.489593,31.399439")
     })
 })
 

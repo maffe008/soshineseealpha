@@ -1,9 +1,11 @@
 <%= javascript_include_tag '/demo/blockinfo' %>
+<%= javascript_include_tag '/demo/BMap' %>
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <title>DEMO|SoshineSee</title>
 
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=NccogPfKH2hGdsARVdK7lsVvNao7Y4Hm"></script>
+
 </head>
 <div class="container">
   <div class="row clearfix">
@@ -22,22 +24,22 @@
           </div>
           <div id="panel-element-101" class="panel-collapse collapse in">
             <div id="block_A_1" class="panel-body">
-              新主楼		<input type="button" onclick="add_overlay();" value="添加覆盖物" />
+              <a onclick="add_overlay_A_1()">新主楼</a>
             </div>
             <div id="block_A_2" class="panel-body">
-              老教学区
+              <a onclick="add_overlay_A_2()">老教学区</a>
             </div>
             <div id="block_A_3" class="panel-body">
-              体育馆游泳馆
+              <a onclick="add_overlay_A_3()">体育馆游泳馆</a>
             </div>
             <div id="block_A_4" class="panel-body">
-              操场
+              <a onclick="add_overlay_A_4()">操场</a>
             </div>
             <div id="block_A_5" class="panel-body">
-              北区
+              <a onclick="add_overlay_A_5()">北区</a>
             </div>
             <div id="block_A_6" class="panel-body">
-              大运村
+              <a onclick="add_overlay_A_6()">大运村</a>
             </div>
           </div>
         </div>
@@ -47,17 +49,17 @@
           </div>
           <div id="panel-element-102" class="panel-collapse collapse">
             <div id="block_B_1" class="panel-body">
-              旺座
+              <a onclick="add_overlay_B_1()">旺座</a>
             </div>
             <div id="block_B_2" class="panel-body">
-              世宁大厦
+              <a onclick="add_overlay_B_2()">世宁大厦</a>
             </div>
 
             <div id="block_B_3" class="panel-body">
-              学院国际大厦
+              <a onclick="add_overlay_B_3()">学院国际大厦</a>
             </div>
             <div id="block_B_4" class="panel-body">
-              致真大厦
+              <a onclick="add_overlay_B_4()">致真大厦</a>
             </div>
           </div>
         </div>
@@ -67,10 +69,10 @@
           </div>
           <div id="panel-element-103" class="panel-collapse collapse">
             <div id="block_C_1" class="panel-body">
-              上兴镇
+              <a onclick="add_overlay_C_1()">上兴镇</a>
             </div>
             <div id="block_C_2" class="panel-body">
-              溧阳市
+              <a onclick="add_overlay_C_2()">溧阳市</a>
             </div>
           </div>
         </div>
@@ -108,8 +110,8 @@
       </div>
       <!--日期-->
       <div class="btn-group btn-group-sm">
-        <button class="btn btn-default" type="button"><em ></em> 201603</button>
-        <button class="btn btn-default" type="button"><em ></em> 201604</button>
+        <button class="btn btn-default" type="button"><em onclick=openDis()></em> openDis</button>
+        <button class="btn btn-default" type="button"><em onclick=closeDis()></em> closeDis</button>
         <button class="btn btn-default" type="button"><em ></em> 201605</button>
         <button class="btn btn-default" type="button"><em ></em> 201606</button>
         <button class="btn btn-default" type="button"><em ></em> 201607</button>
@@ -122,33 +124,19 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="demo/blockinfo.js"></script>
-<script type="text/javascript">
+<script>
   // 百度地图API功能
-  var map = new BMap.Map("allmap");    // 创建Map实例
+  var map = new BMap.Map("allmap",{mapType:BMAP_HYBRID_MAP});    // 创建Map实例
+
   map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
   map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
   map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
   map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-  map.addEventListener("click",function(e){
-    alert(e.point.lng + "," + e.point.lat);
-  });
-  var pStart = new BMap.Point(116.357064,39.987036);
-  var pEnd = new BMap.Point(116.35983,39.985198);
-  var rectangle = new BMap.Polygon([
-    new BMap.Point(pStart.lng,pStart.lat),
-    new BMap.Point(pEnd.lng,pStart.lat),
-    new BMap.Point(pEnd.lng,pEnd.lat),
-    new BMap.Point(pStart.lng,pEnd.lat)
-  ], {strokeColor:"grey", strokeWeight:1, strokeOpacity:0.5});  //创建矩形
+  //map.addEventListener("click",function(e){alert(e.point.lng + "," + e.point.lat);});
 
-  //添加覆盖物
-  function add_overlay(){
-    //map.addOverlay(marker);            //增加点
-    //map.addOverlay(polyline);          //增加折线
-    //map.addOverlay(circle);            //增加圆
-    //map.addOverlay(polygon);           //增加多边形
-    map.addOverlay(rectangle);         //增加矩形
-    map.centerAndZoom(new BMap.Point(116.357064,39.987036),18);
-  }
+  var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+  var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+  map.addControl(top_left_control);
+  map.addControl(top_left_navigation);
+
 </script>
