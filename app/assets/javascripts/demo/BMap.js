@@ -1,9 +1,13 @@
 /**
  * Created by maffee on 16/10/16.
  */
+function focus_test_A(){
 
+    var keyPoint = new BMap.Point(116.356951,39.986874)
+    map.centerAndZoom(keyPoint,17);
+}
 
-function add_overlay_A_1(){
+function add_overlay_test_A_1(){
 
     var keyPoint = new BMap.Point(116.356951,39.986874)
     var polygon = new BMap.Polygon([
@@ -15,10 +19,10 @@ function add_overlay_A_1(){
 
     map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
-    map.centerAndZoom(keyPoint,18);
+    //map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_A_2(){
+function add_overlay_test_A_2(){
     var keyPoint = new BMap.Point(116.356102,39.990951)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -29,10 +33,10 @@ function add_overlay_A_2(){
 
     map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
-    map.centerAndZoom(keyPoint,18);
+    //map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_A_3(){
+function add_overlay_test_A_3(){
     var keyPoint = new BMap.Point(116.354674,39.986639)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -45,10 +49,10 @@ function add_overlay_A_3(){
 
     map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
-    map.centerAndZoom(keyPoint,18);
+    //map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_A_4(){
+function add_overlay_test_A_4(){
     var keyPoint = new BMap.Point(116.351642,39.986853)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -59,10 +63,10 @@ function add_overlay_A_4(){
 
     map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
-    map.centerAndZoom(keyPoint,18);
+    //map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_A_5(){
+function add_overlay_test_A_5(){
     var keyPoint = new BMap.Point(116.350802,39.991808)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -73,10 +77,10 @@ function add_overlay_A_5(){
 
     map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
-    map.centerAndZoom(keyPoint,18);
+    //map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_A_6(){
+function add_overlay_test_A_6(){
     var keyPoint = new BMap.Point(116.348197,39.984)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -88,10 +92,10 @@ function add_overlay_A_6(){
 
     map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
-    map.centerAndZoom(keyPoint,18);
+    //map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_B_1(){
+function add_overlay_test_B_1(){
     var keyPoint = new BMap.Point(116.464402,39.921089)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -105,7 +109,7 @@ function add_overlay_B_1(){
     map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_B_2(){
+function add_overlay_test_B_2(){
     var keyPoint = new BMap.Point(116.358303,39.991833)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -119,7 +123,7 @@ function add_overlay_B_2(){
     map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_B_3(){
+function add_overlay_test_B_3(){
     var keyPoint = new BMap.Point(116.359327,39.983627)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -133,7 +137,7 @@ function add_overlay_B_3(){
     map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_B_4(){
+function add_overlay_test_B_4(){
     var keyPoint = new BMap.Point(116.357144,39.983548)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -147,7 +151,7 @@ function add_overlay_B_4(){
     map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_C_1(){
+function add_overlay_test_C_1(){
     var keyPoint = new BMap.Point(119.264317,31.565538)
     var polygon = new BMap.Polygon([
         keyPoint,
@@ -161,7 +165,7 @@ function add_overlay_C_1(){
     map.centerAndZoom(keyPoint,18);
 }
 
-function add_overlay_C_2(){
+function add_overlay_test_C_2(){
     var keyPoint = new BMap.Point(119.489593,31.399439)
     var polygon = new BMap.Polygon([
         keyPoint,
