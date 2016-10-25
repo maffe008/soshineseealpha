@@ -1,11 +1,12 @@
 <%= javascript_include_tag '/demo/blockinfo' %>
 <%= javascript_include_tag '/demo/BMap' %>
+
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <title>DEMO|SoshineSee</title>
 
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=NccogPfKH2hGdsARVdK7lsVvNao7Y4Hm"></script>
-
+  <script type="text/javascript" src="/demo/convertor.js"></script>
 </head>
 <div class="container">
   <div class="row clearfix">
@@ -25,7 +26,7 @@
           </div>
           <div id="panel-element-101" class="panel-collapse collapse">
             <div id="boluo_block_A_1" class="panel-body">
-              <a onclick="add_overlay_boluo_A_1()">新主楼</a>
+              <a onclick="add_overlay_boluo_A_1()"></a>
             </div>
           </div>
 
@@ -139,14 +140,16 @@
       <!--日期-->
       <!--类型-->
       <div class="btn-group-vertical" id="mapchoice">
-        <button type="button" class="btn btn-default" id="btn_NC">NC</button>
-        <button type="button" class="btn btn-default" id="btn_VAL">VAL</button>
-        <button type="button" class="btn btn-default" id="btn_NVDI">NVDI</button>
+        <button type="button" class="btn btn-default" id="btn_nc" onclick="btn_nc">NC</button>
+        <button type="button" class="btn btn-default" id="btn_val" onclick="btn_val">VAL</button>
+        <button type="button" class="btn btn-default" id="btn_nvdi" onclick="btn_nvdi">NVDI</button>
+        <button type="button" class="btn btn-default" id="btn_other" onclick="btn_other">OTHER</button>
       </div>
       <!--工具-->
       <div class="btn-group" id="maptools">
-        <button type="button" class="btn btn-default" id="btn_ruler">测距</button>
-        <button type="button" class="btn btn-default" id="btn_draw">绘图</button>
+        <button type="button" class="btn btn-default" id="btn_ruler" onclick="btn_ruler">测距</button>
+        <button type="button" class="btn btn-default" id="btn_draw" onclick="focus_boluo_A()">绘图</button>
+        <button type="button" class="btn btn-default" id="btn_go" onclick="btn_go()">GO</button>
       </div>
 
 
@@ -161,7 +164,7 @@
   //map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
   map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
   map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-  //map.addEventListener("click",function(e){alert(e.point.lng + "," + e.point.lat);});
+  map.addEventListener("click",function(e){alert(e.point.lng + "," + e.point.lat);});
 
   var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
   var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
