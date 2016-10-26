@@ -1,5 +1,11 @@
-<%= javascript_include_tag '/demo/blockinfo' %>
-<%= javascript_include_tag '/demo/BMap' %>
+<%= javascript_include_tag '/demo/DemoPage'%>
+<%= javascript_include_tag '/demo/Test_Blockinfo' %>
+<%= javascript_include_tag '/demo/Test_Overlay' %>
+<%= javascript_include_tag '/demo/Test_Groundlay' %>
+<%= javascript_include_tag '/demo/Boluo_Blockinfo' %>
+<%= javascript_include_tag '/demo/Boluo_Overlay' %>
+<%= javascript_include_tag '/demo/Boluo_Groundlay' %>
+
 
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -7,6 +13,7 @@
 
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=NccogPfKH2hGdsARVdK7lsVvNao7Y4Hm"></script>
   <script type="text/javascript" src="/demo/convertor.js"></script>
+
 </head>
 <div class="container">
   <div class="row clearfix">
@@ -22,16 +29,19 @@
           </div>
 
           <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100" href="#panel-element-101">地块A</a>
+            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
+               href="#panel-element-101" onclick="focus_boluo_A()">博罗县</a>
           </div>
           <div id="panel-element-101" class="panel-collapse collapse">
-            <div id="boluo_block_A_1" class="panel-body">
-              <a onclick="add_overlay_boluo_A_1()"></a>
+            <div id="boluo_block_A_1" class="panel-body"
+                 onmouseover="add_overlay_boluo_A()" onmouseout="clear_overlay()">
+              1-1地块细化示例区域
             </div>
           </div>
 
           <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100" href="#panel-element-102">地块B1</a>
+            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
+               href="#panel-element-102">地块B1</a>
           </div>
           <div id="panel-element-102" class="panel-collapse collapse">
             <div id="boluo_block_B1_1" class="panel-body">
@@ -40,7 +50,8 @@
           </div>
 
           <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100" href="#panel-element-103">地块B2</a>
+            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
+               href="#panel-element-103">地块B2</a>
           </div>
           <div id="panel-element-103" class="panel-collapse collapse">
             <div id="boluo_block_B2_1" class="panel-body">
@@ -49,62 +60,57 @@
           </div>
 
           <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100" href="#panel-element-111" onclick="focus_test_A()">北航</a>
+            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
+               href="#panel-element-111" onclick="focus_test_A()">北京航空航天大学</a>
           </div>
           <div id="panel-element-111" class="panel-collapse collapse">
-            <div id="block_test_A_1" class="panel-body">
-              <a onmouseover="add_overlay_test_A_1()" href="#">新主楼</a>
+            <div id="block_test_A_1" class="panel-body"
+                 onmouseover="add_overlay_test_A_1()" onmouseout="clear_overlay()">
+              新主楼
             </div>
-            <div id="block_test_A_2" class="panel-body">
-              <a onmouseover="add_overlay_test_A_2()" href="#">老教学区</a>
+            <div id="block_test_A_2" class="panel-body"
+                 onmouseover="add_overlay_test_A_2()" onmouseout="clear_overlay()">
+              老教学区
             </div>
-            <div id="block_test_A_3" class="panel-body">
-              <a onmouseover="add_overlay_test_A_3()" href="#">体育馆游泳馆</a>
+            <div id="block_test_A_3" class="panel-body"
+                 onmouseover="add_overlay_test_A_3()" onmouseout="clear_overlay()">
+              体育馆游泳馆
             </div>
-            <div id="block_test_A_4" class="panel-body">
-              <a onmouseover="add_overlay_test_A_4()" href="#">操场</a>
+            <div id="block_test_A_4" class="panel-body"
+                 onmouseover="add_overlay_test_A_4()" onmouseout="clear_overlay()">
+              操场
             </div>
-            <div id="block_test_A_5" class="panel-body">
-              <a onmouseover="add_overlay_test_A_5()" href="#">北区</a>
+            <div id="block_test_A_5" class="panel-body"
+                 onmouseover="add_overlay_test_A_5()" onmouseout="clear_overlay()">
+              北区
             </div>
-            <div id="block_test_A_6" class="panel-body">
-              <a onmouseover="add_overlay_test_A_6()" href="#">大运村</a>
+            <div id="block_test_A_6" class="panel-body"
+                 onmouseover="add_overlay_test_A_6()" onmouseout="clear_overlay()">
+              大运村
             </div>
           </div>
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100" href="#panel-element-112">首欣集团</a>
+            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
+               href="#panel-element-112" onclick="focus_test_B()">首欣科技</a>
           </div>
           <div id="panel-element-112" class="panel-collapse collapse">
-            <div id="block_test_B_1" class="panel-body">
-              <a onclick="add_overlay_test_B_1()">旺座</a>
+            <div id="block_test_B_2" class="panel-body"
+                 onmouseover="add_overlay_test_B_2()" onmouseout="clear_overlay()">
+              世宁大厦
             </div>
-            <div id="block_test_B_2" class="panel-body">
-              <a onclick="add_overlay_test_B_2()">世宁大厦</a>
+            <div id="block_test_B_3" class="panel-body"
+                 onmouseover="add_overlay_test_B_3()" onmouseout="clear_overlay()">
+              学院国际大厦
             </div>
+            <div id="block_test_B_4" class="panel-body"
+                 onmouseover="add_overlay_test_B_4()" onmouseout="clear_overlay()">
+              致真大厦
+            </div>
+          </div>
+        </div>
 
-            <div id="block_test_B_3" class="panel-body">
-              <a onclick="add_overlay_test_B_3()">学院国际大厦</a>
-            </div>
-            <div id="block_test_B_4" class="panel-body">
-              <a onclick="add_overlay_test_B_4()">致真大厦</a>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100" href="#panel-element-113">天伦集团</a>
-          </div>
-          <div id="panel-element-113" class="panel-collapse collapse">
-            <div id="block_test_C_1" class="panel-body">
-              <a onclick="add_overlay_test_C_1()">上兴镇</a>
-            </div>
-            <div id="block_test_C_2" class="panel-body">
-              <a onclick="add_overlay_test_C_2()">溧阳市</a>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!--侧边栏|信息-->
@@ -140,15 +146,15 @@
       <!--日期-->
       <!--类型-->
       <div class="btn-group-vertical" id="mapchoice">
-        <button type="button" class="btn btn-default" id="btn_nc" onclick="btn_nc">NC</button>
-        <button type="button" class="btn btn-default" id="btn_val" onclick="btn_val">VAL</button>
-        <button type="button" class="btn btn-default" id="btn_nvdi" onclick="btn_nvdi">NVDI</button>
-        <button type="button" class="btn btn-default" id="btn_other" onclick="btn_other">OTHER</button>
+        <button type="button" class="btn btn-default" id="btn_nc" onclick="btn_nc()">NC</button>
+        <button type="button" class="btn btn-default" id="btn_val" onclick="btn_val()">VAL</button>
+        <button type="button" class="btn btn-default" id="btn_nvdi" onclick="btn_nvdi()">NVDI</button>
+        <button type="button" class="btn btn-default" id="btn_other" onclick="btn_spec()">SPEC</button>
       </div>
       <!--工具-->
       <div class="btn-group" id="maptools">
-        <button type="button" class="btn btn-default" id="btn_ruler" onclick="btn_ruler">测距</button>
-        <button type="button" class="btn btn-default" id="btn_draw" onclick="focus_boluo_A()">绘图</button>
+        <button type="button" class="btn btn-default" id="btn_ruler" onclick="btn_ruler()">测距</button>
+        <button type="button" class="btn btn-default" id="btn_draw" onclick="btn_draw()">绘图</button>
         <button type="button" class="btn btn-default" id="btn_go" onclick="btn_go()">GO</button>
       </div>
 
