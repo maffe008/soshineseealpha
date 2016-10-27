@@ -5,6 +5,8 @@ function focus_test_A(){
 
     var keyPoint = new BMap.Point(116.356951,39.986874);
     map.centerAndZoom(keyPoint,17);
+
+    currentblock = 101;
 }
 
 function add_overlay_test_A_1(){
@@ -105,6 +107,8 @@ function focus_test_B(){
 
     var keyPoint = new BMap.Point(116.356951,39.986874);
     map.centerAndZoom(keyPoint,17);
+
+    currentblock = 102;
 }
 
 function add_overlay_test_B_2(){

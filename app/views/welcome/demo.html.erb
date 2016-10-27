@@ -30,7 +30,7 @@
 
           <div class="panel-heading">
             <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
-               href="#panel-element-101" onclick="focus_boluo_A()">博罗县</a>
+               href="#panel-element-101" onclick="focus_boluo_A()">博罗西南</a>
           </div>
           <div id="panel-element-101" class="panel-collapse collapse">
             <div id="boluo_block_A_1" class="panel-body"
@@ -41,21 +41,16 @@
 
           <div class="panel-heading">
             <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
-               href="#panel-element-102">地块B1</a>
+               href="#panel-element-102" onclick="focus_boluo_B()">博罗高速河流</a>
           </div>
           <div id="panel-element-102" class="panel-collapse collapse">
-            <div id="boluo_block_B1_1" class="panel-body">
-              <a onclick="add_overlay_boluo_B1_1()">新主楼</a>
+            <div id="boluo_block_B1_1" class="panel-body"
+                 onmouseover="add_overlay_boluo_B_1()" onmouseout="clear_overlay()">
+              十字田埂示例区域
             </div>
-          </div>
-
-          <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
-               href="#panel-element-103">地块B2</a>
-          </div>
-          <div id="panel-element-103" class="panel-collapse collapse">
-            <div id="boluo_block_B2_1" class="panel-body">
-              <a onclick="add_overlay_boluo_B2_1()">新主楼</a>
+            <div id="boluo_block_B2_1" class="panel-body"
+                 onmouseover="add_overlay_boluo_B_2()" onmouseout="clear_overlay()">
+              水塘示例区域
             </div>
           </div>
 
@@ -146,16 +141,21 @@
       <!--日期-->
       <!--类型-->
       <div class="btn-group-vertical" id="mapchoice">
-        <button type="button" class="btn btn-default" id="btn_nc" onclick="btn_nc()">NC</button>
-        <button type="button" class="btn btn-default" id="btn_val" onclick="btn_val()">VAL</button>
-        <button type="button" class="btn btn-default" id="btn_nvdi" onclick="btn_nvdi()">NVDI</button>
-        <button type="button" class="btn btn-default" id="btn_other" onclick="btn_spec()">SPEC</button>
-      </div>
-      <!--工具-->
-      <div class="btn-group" id="maptools">
-        <button type="button" class="btn btn-default" id="btn_ruler" onclick="btn_ruler()">测距</button>
-        <button type="button" class="btn btn-default" id="btn_draw" onclick="btn_draw()">绘图</button>
-        <button type="button" class="btn btn-default" id="btn_go" onclick="btn_go()">GO</button>
+        <button type="button" class="btn btn-default" id="btn_nc" data-toggle="tooltip"
+                data-placement="right" title="高清航拍图" onclick="btn_nc()">NC</button>
+        <button type="button" class="btn btn-default" id="btn_val" data-toggle="tooltip"
+                data-placement="right" title="VALUE图"  onclick="btn_val()">VAL</button>
+        <button type="button" class="btn btn-default" id="btn_nvdi" data-toggle="tooltip"
+                data-placement="right" title="NVDI图"  onclick="btn_nvdi()">NVDI</button>
+        <button type="button" class="btn btn-default" id="btn_other" data-toggle="tooltip"
+                data-placement="right" title="地块特殊图"  onclick="btn_spec()">SPEC</button>
+        <br/>
+        <button type="button" class="btn btn-default" id="btn_ruler" data-toggle="tooltip"
+                data-placement="right" title="测距工具"  onclick="btn_ruler()">测距</button>
+        <button type="button" class="btn btn-default" id="btn_draw" data-toggle="tooltip"
+                data-placement="right" title="绘图工具"  onclick="btn_draw()">绘图</button>
+        <button type="button" class="btn btn-default" id="btn_go" data-toggle="tooltip"
+                data-placement="right" title="导航"  onclick="btn_go()">GO</button>
       </div>
 
 
@@ -177,4 +177,9 @@
   map.addControl(top_left_control);
   map.addControl(top_left_navigation);
 
+  $(function () {
+    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+  });
+
+  var currentblock = 0;
 </script>
