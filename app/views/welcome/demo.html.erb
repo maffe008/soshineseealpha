@@ -1,18 +1,16 @@
-<%= javascript_include_tag '/demo/DemoPage'%>
-<%= javascript_include_tag '/demo/Test_Blockinfo' %>
-<%= javascript_include_tag '/demo/Test_Overlay' %>
-<%= javascript_include_tag '/demo/Test_Groundlay' %>
-<%= javascript_include_tag '/demo/Boluo_Blockinfo' %>
-<%= javascript_include_tag '/demo/Boluo_Overlay' %>
-<%= javascript_include_tag '/demo/Boluo_Groundlay' %>
-
-
 <head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <title>DEMO|SoshineSee</title>
 
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=NccogPfKH2hGdsARVdK7lsVvNao7Y4Hm"></script>
   <script type="text/javascript" src="/demo/convertor.js"></script>
+  <%= javascript_include_tag '/demo/DemoPage'%>
+  <%= javascript_include_tag '/demo/Test_Blockinfo' %>
+  <%= javascript_include_tag '/demo/Test_Overlay' %>
+  <%= javascript_include_tag '/demo/Test_Groundlay' %>
+  <%= javascript_include_tag '/demo/Boluo_Blockinfo' %>
+  <%= javascript_include_tag '/demo/Boluo_Overlay' %>
+  <%= javascript_include_tag '/demo/Boluo_Groundlay' %>
 
 </head>
 <div class="container">
@@ -33,9 +31,69 @@
                href="#panel-element-101" onclick="focus_boluo_A()">博罗西南</a>
           </div>
           <div id="panel-element-101" class="panel-collapse collapse">
-            <div id="boluo_block_A_1" class="panel-body"
-                 onmouseover="add_overlay_boluo_A()" onmouseout="clear_overlay()">
+            <div id="boluo_block_A_all" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_all()" onmouseout="remove_boluo_overlay()">
               1-1地块细化示例区域
+            </div>
+            <div id="boluo_block_A_01" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_01()" onmouseout="remove_boluo_overlay()">
+              老马家水田
+            </div>
+            <div id="boluo_block_A_02" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_02()" onmouseout="remove_boluo_overlay()">
+              老李家水田
+            </div>
+            <div id="boluo_block_A_03" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_03()" onmouseout="remove_boluo_overlay()">
+              老袁家水田
+            </div>
+            <div id="boluo_block_A_04" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_04()" onmouseout="remove_boluo_overlay()">
+              老樊家水田
+            </div>
+            <div id="boluo_block_A_05" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_05()" onmouseout="remove_boluo_overlay()">
+              老樊家旱田
+            </div>
+            <div id="boluo_block_A_06" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_06()" onmouseout="remove_boluo_overlay()">
+              老陈家水田西
+            </div>
+            <div id="boluo_block_A_07" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_07()" onmouseout="remove_boluo_overlay()">
+              老陈家水田东
+            </div>
+            <div id="boluo_block_A_08" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_08()" onmouseout="remove_boluo_overlay()">
+              老曹家水田
+            </div>
+            <div id="boluo_block_A_09" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_09()" onmouseout="remove_boluo_overlay()">
+              大队旱田北
+            </div>
+            <div id="boluo_block_A_10" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_10()" onmouseout="remove_boluo_overlay()">
+              大队旱田南
+            </div>
+            <div id="boluo_block_A_11" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_11()" onmouseout="remove_boluo_overlay()">
+              示范旱田
+            </div>
+            <div id="boluo_block_A_12" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_12()" onmouseout="remove_boluo_overlay()">
+              示范水田
+            </div>
+            <div id="boluo_block_A_13" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_13()" onmouseout="remove_boluo_overlay()">
+              大队水田
+            </div>
+            <div id="boluo_block_A_14" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_14()" onmouseout="remove_boluo_overlay()">
+              老马家旱田
+            </div>
+            <div id="boluo_block_A_15" class="panel-body"
+                 onmouseover="add_overlay_boluo_A_15()" onmouseout="remove_boluo_overlay()">
+              综合地块
             </div>
           </div>
 
@@ -45,11 +103,11 @@
           </div>
           <div id="panel-element-102" class="panel-collapse collapse">
             <div id="boluo_block_B1_1" class="panel-body"
-                 onmouseover="add_overlay_boluo_B_1()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_boluo_B_1()" onmouseout="remove_boluo_overlay()">
               十字田埂示例区域
             </div>
             <div id="boluo_block_B2_1" class="panel-body"
-                 onmouseover="add_overlay_boluo_B_2()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_boluo_B_2()" onmouseout="remove_boluo_overlay()">
               水塘示例区域
             </div>
           </div>
@@ -60,27 +118,27 @@
           </div>
           <div id="panel-element-111" class="panel-collapse collapse">
             <div id="block_test_A_1" class="panel-body"
-                 onmouseover="add_overlay_test_A_1()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_test_A_1()" onmouseout="remove_test_overlay()">
               新主楼
             </div>
             <div id="block_test_A_2" class="panel-body"
-                 onmouseover="add_overlay_test_A_2()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_test_A_2()" onmouseout="remove_test_overlay()">
               老教学区
             </div>
             <div id="block_test_A_3" class="panel-body"
-                 onmouseover="add_overlay_test_A_3()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_test_A_3()" onmouseout="remove_test_overlay()">
               体育馆游泳馆
             </div>
             <div id="block_test_A_4" class="panel-body"
-                 onmouseover="add_overlay_test_A_4()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_test_A_4()" onmouseout="remove_test_overlay()">
               操场
             </div>
             <div id="block_test_A_5" class="panel-body"
-                 onmouseover="add_overlay_test_A_5()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_test_A_5()" onmouseout="remove_test_overlay()">
               北区
             </div>
             <div id="block_test_A_6" class="panel-body"
-                 onmouseover="add_overlay_test_A_6()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_test_A_6()" onmouseout="remove_test_overlay()">
               大运村
             </div>
           </div>
@@ -92,15 +150,15 @@
           </div>
           <div id="panel-element-112" class="panel-collapse collapse">
             <div id="block_test_B_2" class="panel-body"
-                 onmouseover="add_overlay_test_B_2()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_test_B_2()" onmouseout="remove_test_overlay()">
               世宁大厦
             </div>
             <div id="block_test_B_3" class="panel-body"
-                 onmouseover="add_overlay_test_B_3()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_test_B_3()" onmouseout="remove_test_overlay()">
               学院国际大厦
             </div>
             <div id="block_test_B_4" class="panel-body"
-                 onmouseover="add_overlay_test_B_4()" onmouseout="clear_overlay()">
+                 onmouseover="add_overlay_test_B_4()" onmouseout="remove_test_overlay()">
               致真大厦
             </div>
           </div>
@@ -154,8 +212,12 @@
                 data-placement="right" title="测距工具"  onclick="btn_ruler()">测距</button>
         <button type="button" class="btn btn-default" id="btn_draw" data-toggle="tooltip"
                 data-placement="right" title="绘图工具"  onclick="btn_draw()">绘图</button>
+        <!--
         <button type="button" class="btn btn-default" id="btn_go" data-toggle="tooltip"
                 data-placement="right" title="导航"  onclick="btn_go()">GO</button>
+        -->
+        <button type="button" class="btn btn-default" id="btn_clear" data-toggle="tooltip"
+                data-placement="right" title="导航"  onclick="btn_clear()">清空</button>
       </div>
 
 
@@ -181,5 +243,71 @@
     $(function () { $("[data-toggle='tooltip']").tooltip(); });
   });
 
-  var currentblock = 0;
+  currentblock = 0;
+  isGroundOverlay = false;
+  polygon = new BMap.Polygon();
+
+  var bp01 = new BMap.Point(114.203385,23.129844);
+  var bp02 = new BMap.Point(114.203681,23.129844);
+  var bp03 = new BMap.Point(114.204427,23.130218);
+  var bp04 = new BMap.Point(114.205603,23.131165);
+  var bp05 = new BMap.Point(114.206834,23.132113);
+  var bp06 = new BMap.Point(114.207831,23.132586);
+  var bp07 = new BMap.Point(114.208972,23.132619);
+  var bp08 = new BMap.Point(114.000000,23.000000);
+  var bp09 = new BMap.Point(114.210257,23.13419);
+  var bp10 = new BMap.Point(114.212116,23.13419);
+  var bp11 = new BMap.Point(114.213769,23.134206);
+  var bp12 = new BMap.Point(114.213778,23.131448);
+  var bp13 = new BMap.Point(114.212601,23.130609);
+  var bp14 = new BMap.Point(114.211254,23.130783);
+  var bp15 = new BMap.Point(114.210185,23.131872);
+  var bp16 = new BMap.Point(114.209942,23.131772);
+  var bp171 = new BMap.Point(114.208918,23.131016);
+  var bp172 = new BMap.Point(114.208765,23.131348);
+  var bp173 = new BMap.Point(114.208514,23.131207);
+  var bp174 = new BMap.Point(114.208388,23.130808);
+  var bp18 = new BMap.Point(114.207822,23.130476);
+  var bp19 = new BMap.Point(114.207867,23.129977);
+  var bp20 = new BMap.Point(114.209026,23.130559);
+  var bp21 = new BMap.Point(114.210508,23.13031);
+  var bp22 = new BMap.Point(114.209825,23.126878);
+  var bp23 = new BMap.Point(114.209466,23.125831);
+  var bp24 = new BMap.Point(114.209026,23.124535);
+  var bp25 = new BMap.Point(114.207077,23.12456);
+  var bp26 = new BMap.Point(114.204228,23.124577);
+  var bp27 = new BMap.Point(114.203394,23.124577);
+  var bp28 = new BMap.Point(114.203915,23.128075);
+  var bp29 = new BMap.Point(114.204112,23.127535);
+  var bp30 = new BMap.Point(114.204373,23.126297);
+  var bp31 = new BMap.Point(114.20449,23.12574);
+  var bp32 = new BMap.Point(114.205774,23.125948);
+  var bp33 = new BMap.Point(114.206178,23.124901);
+  var bp34 = new BMap.Point(114.20678,23.12505);
+  var bp35 = new BMap.Point(114.206187,23.127152);
+  var bp36 = new BMap.Point(114.207265,23.127593);
+  var bp37 = new BMap.Point(114.20767,23.128889);
+  var bp38 = new BMap.Point(114.206762,23.129088);
+  var bp39 = new BMap.Point(114.205639,23.127817);
+  var bp40 = new BMap.Point(114.205226,23.129155);
+  var bp41 = new BMap.Point(114.206259,23.129578);
+  var bp42 = new BMap.Point(114.206789,23.129645);
+
+  var block01 = [bp02,bp03,bp40,bp41,bp42,bp38,bp28];
+  var block02 = [bp03,bp04,bp41,bp40];
+  var block03 = [bp04,bp05,bp42,bp41];
+  var block04 = [bp05,bp06,bp37,bp38];
+  var block05 = [bp06,bp07,bp16,bp171,bp172,bp173,bp174,bp18];
+  var block06 = [bp07,bp09,bp10,bp13,bp14,bp15,bp16];
+  var block07 = [bp10,bp11,bp12,bp13];
+  var block08 = [bp18,bp174,bp173,bp172,bp171,bp15,bp14,bp21,bp20,bp19];
+  var block09 = [bp19,bp20,bp21,bp14,bp13,bp22,bp37];
+  var block10 = [bp35,bp36,bp23,bp24,bp25];
+  var block11 = [bp30,bp35,bp34,bp33,bp32,bp31];
+  var block12 = [bp31,bp32,bp33,bp34,bp25,bp26];
+  var block13 = [bp01,bp02,bp31,bp26,bp27];
+  var block14 = [bp28,bp38,bp39,bp29];
+  var block15 = [bp29,bp39,bp38,bp37,bp22,bp23,bp36,bp35,bp30];
+
+
 </script>
