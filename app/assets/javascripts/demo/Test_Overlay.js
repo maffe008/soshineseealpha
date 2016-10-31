@@ -29,6 +29,10 @@ function focus_test_A(){
     map.centerAndZoom(keyPoint,17);
 
     currentblock = 101;
+    document.getElementById("btn_nc").style.backgroundColor = "#999999";
+    document.getElementById("btn_val").style.backgroundColor = "#999999";
+    document.getElementById("btn_nvdi").style.backgroundColor = "#999999";
+    document.getElementById("btn_spec").style.backgroundColor = "coral";
 }
 
 function add_overlay_test_A_1(){
@@ -167,6 +171,10 @@ function focus_test_B(){
     map.centerAndZoom(keyPoint,17);
 
     currentblock = 102;
+    document.getElementById("btn_nc").style.backgroundColor = "#999999";
+    document.getElementById("btn_val").style.backgroundColor = "#999999";
+    document.getElementById("btn_nvdi").style.backgroundColor = "#999999";
+    document.getElementById("btn_spec").style.backgroundColor = "coral";
 }
 
 function add_overlay_test_B_2(){

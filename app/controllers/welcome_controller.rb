@@ -24,4 +24,12 @@ class WelcomeController < ApplicationController
 
   end
 
+  def data
+
+  end
+
+  def task
+
+  end
+
 end

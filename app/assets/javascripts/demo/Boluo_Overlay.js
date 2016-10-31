@@ -31,6 +31,13 @@ function focus_boluo_A(){
     convertor.translate(points, 1, 5, translateCallback);
 
     currentblock = 1;
+
+    document.getElementById("btn_nc").style.backgroundColor = "coral";
+    document.getElementById("btn_val").style.backgroundColor = "#999999";
+    document.getElementById("btn_nvdi").style.backgroundColor = "coral";
+    document.getElementById("btn_spec").style.backgroundColor = "#999999";
+
+
 }
 
 function add_overlay_boluo_A_all(){
@@ -309,6 +316,11 @@ function add_overlay_boluo_B_1(){
 
     var convertor = new BMap.Convertor();
     convertor.translate(points, 1, 5, translateCallback);
+
+    document.getElementById("btn_nc").style.backgroundColor = "coral";
+    document.getElementById("btn_val").style.backgroundColor = "coral";
+    document.getElementById("btn_nvdi").style.backgroundColor = "coral";
+    document.getElementById("btn_spec").style.backgroundColor = "#999999";
 
 }
 

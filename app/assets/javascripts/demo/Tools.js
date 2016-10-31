@@ -57,6 +57,7 @@ function btn_nc(){
 
 function btn_val(){
     alert("本地块无VAL图像");
+
 }
 
 function btn_nvdi(){
@@ -147,13 +148,24 @@ function btn_spec(){
 }
 
 function btn_xy(){
-    map.addEventListener("click",function(e){
-        alert(e.point.lng + "," + e.point.lat);
-    });
+    flag_xy = flag_xy * -1;
+    if (flag_xy == 1){
+        map.addEventListener("click",xyfunction);
+        document.getElementById("btn_xy").style.backgroundColor = "#333333";
+        document.getElementById("btn_xy").style.color = "#f6f6f6";
+    }
+    else{
+        map.removeEventListener("click",xyfunction);
+        document.getElementById("btn_xy").style.backgroundColor = "#f6f6f6";
+        document.getElementById("btn_xy").style.color = "black";
+    }
+
+
 }
 
 function btn_draw(){
-    var styleOptions = {
+    /*
+    var styleOptions_under = {
         strokeColor:"red",    //边线颜色。
         fillColor:"white",      //填充颜色。当参数为空时，圆形将没有填充效果。
         strokeWeight: 3,       //边线的宽度，以像素为单位。
@@ -161,8 +173,16 @@ function btn_draw(){
         fillOpacity: 1,      //填充的透明度，取值范围0 - 1。
         strokeStyle: 'solid' //边线的样式，solid或dashed。
     };
-    //实例化鼠标绘制工具
-    var drawingManager = new BMapLib.DrawingManager(map, {
+    */
+    var styleOptions = {
+        strokeColor:"skyblue",    //边线颜色。
+        fillColor:"red",      //填充颜色。当参数为空时，圆形将没有填充效果。
+        strokeWeight: 3,       //边线的宽度，以像素为单位。
+        strokeOpacity: 0.8,	   //边线透明度，取值范围0 - 1。
+        fillOpacity: 0.4,      //填充的透明度，取值范围0 - 1。
+        strokeStyle: 'solid' //边线的样式，solid或dashed。
+    };
+    drawingManager = new BMapLib.DrawingManager(map, {
         isOpen: false, //是否开启绘制模式
         enableDrawingTool: true, //是否显示工具栏
         drawingToolOptions: {
@@ -175,6 +195,39 @@ function btn_draw(){
         polygonOptions: styleOptions, //多边形的样式
         rectangleOptions: styleOptions //矩形的样式
     });
+    //实例化鼠标绘制工具
+    /*
+    if (isGroundOverlay){
+        drawingManager = new BMapLib.DrawingManager(map, {
+            isOpen: false, //是否开启绘制模式
+            enableDrawingTool: true, //是否显示工具栏
+            drawingToolOptions: {
+                anchor: BMAP_ANCHOR_TOP_RIGHT, //位置
+                offset: new BMap.Size(5, 5), //偏离值
+            },
+            enableCalculate: true,
+            circleOptions: styleOptions_under, //圆的样式
+            polylineOptions: styleOptions_under, //线的样式
+            polygonOptions: styleOptions_under, //多边形的样式
+            rectangleOptions: styleOptions_under //矩形的样式
+        });
+    }
+    else{
+        drawingManager = new BMapLib.DrawingManager(map, {
+            isOpen: false, //是否开启绘制模式
+            enableDrawingTool: true, //是否显示工具栏
+            drawingToolOptions: {
+                anchor: BMAP_ANCHOR_TOP_RIGHT, //位置
+                offset: new BMap.Size(5, 5), //偏离值
+            },
+            enableCalculate: true,
+            circleOptions: styleOptions, //圆的样式
+            polylineOptions: styleOptions, //线的样式
+            polygonOptions: styleOptions, //多边形的样式
+            rectangleOptions: styleOptions //矩形的样式
+        });
+    }
+    */
     drawingManager.addEventListener("overlaycomplete", function(e) {
         var mode = e.drawingMode;
         var result = e.calculate;
