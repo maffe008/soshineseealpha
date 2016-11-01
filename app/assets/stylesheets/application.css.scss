@@ -21,9 +21,10 @@
 @import "bootstrap";
 
 body{
-    background-color: whitesmoke;
-    padding-top: 50px;
-    font-family: "Microsoft YaHei";
+  background-color: #c4e3f3;
+  padding-top: 50px;
+  font-family: "Microsoft YaHei";
+  overflow-y: auto;
 
 }
 nav.navbar.navbar-default.navbar-fixed-top{
@@ -34,7 +35,45 @@ div.navbar-header{
 
 }
 
+div.container{
+
+}
+
+
+tr.tiff{
+  background-color: gold;
+}
+tr.tfw{
+  background-color: goldenrod;
+}
+tr.kml{
+  background-color: darkgoldenrod;
+}
+tr.png{
+  background-color: lightgreen;
+}
+tr.jpg{
+  background-color: darkseagreen;
+}
+
+tr.ui{
+  background-color: lightskyblue;
+}
+tr.fe{
+  background-color: coral;
+}
+tr.be{
+  background-color: darkseagreen;
+}
+tr.other{
+  background-color: lemonchiffon;
+}
+
+
+
 body.demo {
+  overflow-y: hidden;
+
   div.container {
     margin: 0;
     padding: 0;
