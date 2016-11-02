@@ -37,7 +37,7 @@
 
           <div class="panel-heading">
             <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
-               href="#panel-element-101" onclick="focus_boluo_A()">博罗西南地块</a>
+               href="#panel-element-101" onclick="focus_boluo_A()">博罗县示例地块</a>
           </div>
           <div id="panel-element-101" class="panel-collapse collapse">
             <div id="boluo_block_A_all" class="panel-body"
@@ -108,9 +108,14 @@
 
           <div class="panel-heading">
             <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
-               href="#panel-element-102" onclick="focus_boluo_B()">博罗高速河流交叉地块</a>
+               href="#panel-element-102" onclick="focus_boluo_B()">博罗县全部地块</a>
           </div>
           <div id="panel-element-102" class="panel-collapse collapse">
+            <div id="boluo_block_B_all" class="panel-body"
+                 onmouseover="add_overlay_boluo_B_all()" onmouseout="remove_boluo_overlay()">
+              全部地块
+            </div>
+            <!--
             <div id="boluo_block_B1_1" class="panel-body"
                  onmouseover="add_overlay_boluo_B_1()" onmouseout="remove_boluo_overlay()">
               十字田埂示例区域
@@ -119,6 +124,7 @@
                  onmouseover="add_overlay_boluo_B_2()" onmouseout="remove_boluo_overlay()">
               水塘示例区域
             </div>
+            -->
           </div>
 
           <div class="panel-heading">
@@ -219,7 +225,7 @@
         <button type="button" class="btn btn-default" id="btn_xy" data-toggle="tooltip"
                 data-placement="right" title="获取点坐标"  onclick="btn_xy()">坐标</button>
         <button type="button" class="btn btn-default" id="btn_draw" data-toggle="tooltip"
-                data-placement="right" title="绘图与测距"  onclick="btn_draw()">绘图</button>
+                data-placement="right" title="距离与面积"  onclick="btn_draw()">计算</button>
         <!--
         <button type="button" class="btn btn-default" id="btn_go" data-toggle="tooltip"
                 data-placement="right" title="导航"  onclick="btn_go()">GO</button>
@@ -258,8 +264,55 @@
   currentblock = 0;
   isGroundOverlay = false;
   polygon = new BMap.Polygon();
-  drawingManager = new BMapLib.DrawingManager(map);
+
   flag_xy = -1;
+  flag_calculate = -1;
+
+  var styleOptions = {
+    strokeColor:"skyblue",    //边线颜色。
+    fillColor:"red",      //填充颜色。当参数为空时，圆形将没有填充效果。
+    strokeWeight: 3,       //边线的宽度，以像素为单位。
+    strokeOpacity: 0.8,	   //边线透明度，取值范围0 - 1。
+    fillOpacity: 0.4,      //填充的透明度，取值范围0 - 1。
+    strokeStyle: 'solid' //边线的样式，solid或dashed。
+  };
+  drawingManager = new BMapLib.DrawingManager(map, {
+    isOpen: false, //是否开启绘制模式
+    enableDrawingTool: true, //是否显示工具栏
+    drawingToolOptions: {
+      anchor: BMAP_ANCHOR_TOP_RIGHT, //位置
+      offset: new BMap.Size(5, 5), //偏离值
+    },
+    enableCalculate: false,
+    circleOptions: styleOptions, //圆的样式
+    polylineOptions: styleOptions, //线的样式
+    polygonOptions: styleOptions, //多边形的样式
+    rectangleOptions: styleOptions //矩形的样式
+  });
+
+  drawingManager.addEventListener("overlaycomplete", function(e) {
+    var mode = e.drawingMode;
+    var result = e.calculate;
+    if(flag_calculate == 1){
+      if(mode == "polyline"){
+        if(result<1000){
+          alert(result + "米");
+        }
+        else{
+          alert(result/1000 + "千米")
+        }
+      }
+      else{
+        if(result<1000000){
+          alert(result + "平方米");
+        }
+        else{
+          alert(result/1000000 + "平方千米")
+        }
+      }
+    }
+
+  });
 
   var bp01 = new BMap.Point(114.203385,23.129844);
   var bp02 = new BMap.Point(114.203681,23.129844);

@@ -18,13 +18,14 @@ polygonOptions_under = {
     strokeWeight : 2,
     strokeOpacity : 1,
     fillOpacity : 1,
-    fillColor : "white"
+    fillColor : "black"
 };
 
 
 function focus_test_A(){
 
     map.clearOverlays();
+    isGroundOverlay = false;
     var keyPoint = new BMap.Point(116.356951,39.986874);
     map.centerAndZoom(keyPoint,17);
 
@@ -167,6 +168,7 @@ function add_overlay_test_A_6(){
 function focus_test_B(){
 
     map.clearOverlays();
+    isGroundOverlay = false;
     var keyPoint = new BMap.Point(116.356951,39.986874);
     map.centerAndZoom(keyPoint,17);
 

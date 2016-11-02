@@ -9,6 +9,7 @@
 function focus_boluo_A(){
 
     map.clearOverlays();
+    isGroundOverlay = false;
 
     //kml <label>
     var ggn = 23.130875645889883;
@@ -250,13 +251,15 @@ function add_overlay_boluo_A_15(){
 
 function focus_boluo_B(){
 
+    isGroundOverlay = false;
+
     map.clearOverlays();
 
     //kml <label>
-    var ggn = 25.818563183402603;
-    var ggs = 25.817644834602604;
-    var gge = 115.90060622597684;
-    var ggw = 115.90284373765684;
+    var ggn = 23.15029308;
+    var ggs = 23.0948146;
+    var gge = 114.2508615;
+    var ggw = 114.17088341;
 
 
     var centerP = new BMap.Point((ggw+gge)/2,(ggn+ggs)/2);
@@ -266,7 +269,7 @@ function focus_boluo_B(){
         if(data.status === 0) {
             var BcenterP = data.points[0];
 
-            map.centerAndZoom(BcenterP,17);
+            map.centerAndZoom(BcenterP,13);
         }
     };
 
@@ -274,18 +277,40 @@ function focus_boluo_B(){
     convertor.translate(points, 1, 5, translateCallback);
 
     currentblock = 2;
+    document.getElementById("btn_nc").style.backgroundColor = "coral";
+    document.getElementById("btn_val").style.backgroundColor = "coral";
+    document.getElementById("btn_nvdi").style.backgroundColor = "coral";
+    document.getElementById("btn_spec").style.backgroundColor = "#999999";
 
-    alert("该区域坐标有误")
+    //alert("该区域坐标有误")
 }
 
+function add_overlay_boluo_B_all(){
+    var Bblock=[
+        new BMap.Point(114.182604,23.129619),
+        new BMap.Point(114.230322,23.153546),
+        new BMap.Point(114.234562,23.153745),
+        new BMap.Point(114.247138,23.130217),
+        new BMap.Point(114.189431,23.102564),
+        new BMap.Point(114.187132,23.106818)
+    ];
+    if (isGroundOverlay){
+        polygon = new BMap.Polygon(Bblock, polygonOptions_under);  //创建多边形
+    }
+    else {
+        polygon = new BMap.Polygon(Bblock, polygonOptions);
+    }
+    //map.clearOverlays();
+    map.addOverlay(polygon);           //增加多边形覆盖物
+}
 
 function add_overlay_boluo_B_1(){
 
     //kml <label>
-    var ggn = 23.130875645889883;
-    var ggs = 23.121166927809885;
-    var gge = 114.20237471986587;
-    var ggw = 114.19187761906588;
+    var ggn = 23.15029308;
+    var ggs = 23.0948146;
+    var gge = 114.2508615;
+    var ggw = 114.17088341;
 
     //ABCD Point
     var wnP = new BMap.Point(ggw,ggn);
@@ -317,10 +342,7 @@ function add_overlay_boluo_B_1(){
     var convertor = new BMap.Convertor();
     convertor.translate(points, 1, 5, translateCallback);
 
-    document.getElementById("btn_nc").style.backgroundColor = "coral";
-    document.getElementById("btn_val").style.backgroundColor = "coral";
-    document.getElementById("btn_nvdi").style.backgroundColor = "coral";
-    document.getElementById("btn_spec").style.backgroundColor = "#999999";
+
 
 }
 
