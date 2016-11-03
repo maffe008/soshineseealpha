@@ -65,11 +65,21 @@ tr.fe{
 tr.be{
   background-color: darkseagreen;
 }
+tr.archi{
+  background-color: gold;
+}
 tr.other{
   background-color: lemonchiffon;
 }
-
-
+div.img{
+  height: 400px;
+}
+span.glyphicon-tree-deciduous{
+  padding-left:24px;
+}
+div.progress{
+  margin-bottom: 0;
+}
 
 body.demo {
   overflow-y: hidden;
@@ -173,6 +183,3 @@ body.demo {
   }
 }
 
-span.glyphicon-tree-deciduous{
-  padding-left:24px;
-}
