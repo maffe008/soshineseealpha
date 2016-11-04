@@ -21,7 +21,7 @@
 @import "bootstrap";
 
 body{
-  background-color: #c4e3f3;
+  background-color: #F2F7F9;
   padding-top: 50px;
   font-family: "Microsoft YaHei";
   overflow-y: auto;
@@ -71,6 +71,9 @@ tr.archi{
 tr.other{
   background-color: lemonchiffon;
 }
+tr.app{
+  background-color: #97c03d;
+}
 div.img{
   height: 400px;
 }
@@ -79,6 +82,12 @@ span.glyphicon-tree-deciduous{
 }
 div.progress{
   margin-bottom: 0;
+}
+div.page-header{
+  border-bottom: none;
+}
+table.table-condensed{
+  background-color: #dddddd;
 }
 
 body.demo {
