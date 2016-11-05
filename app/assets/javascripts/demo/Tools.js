@@ -8,8 +8,9 @@ function btn_nc(){
 
     function boluo_A_nc(){
         //kml <label>
-        var ggn = 23.130875645889883;
-        var ggs = 23.121166927809885;
+        var offset = 0.00026;
+        var ggn = 23.130875645889883-offset;
+        var ggs = 23.121166927809885-offset;
         var gge = 114.20237471986587;
         var ggw = 114.19187761906588;
 
@@ -48,6 +49,7 @@ function btn_nc(){
 
     function boluo_B_nc(){
         //kml <label>
+
         var ggn = 23.15029308;
         var ggs = 23.0948146;
         var gge = 114.2508615;
