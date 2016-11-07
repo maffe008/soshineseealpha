@@ -285,6 +285,8 @@ function focus_boluo_B(){
     //alert("该区域坐标有误")
 }
 
+
+
 function add_overlay_boluo_B_all(){
     var Bblock=[
         new BMap.Point(114.182604,23.129619),
@@ -301,7 +303,10 @@ function add_overlay_boluo_B_all(){
         polygon = new BMap.Polygon(Bblock, polygonOptions);
     }
     //map.clearOverlays();
-    map.addOverlay(polygon);           //增加多边形覆盖物
+    //map.addOverlay(polygon);           //增加多边形覆盖物
+
+    map.addOverlay(polygon)();
+
 }
 
 function add_overlay_boluo_B_1(){

@@ -2,6 +2,7 @@
  * Created by maffee on 16/10/26.
  */
 
+
 function btn_nc(){
 
     isGroundOverlay = true;
@@ -47,6 +48,9 @@ function btn_nc(){
         convertor.translate(points, 1, 5, translateCallback);
     }
 
+
+
+
     function boluo_B_nc(){
         //kml <label>
 
@@ -79,6 +83,7 @@ function btn_nc(){
                 groundOverlay.setImageURL('/assets/demo/soshineseeHuge/DOM-50cmGSD_ok_s.jpg');
                 // 添加GroundOverlay
                 map.clearOverlays();
+
                 map.addOverlay(groundOverlay);
 
             }
