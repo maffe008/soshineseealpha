@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :users
 
   get 'welcome/index'
+  get 'welcome/test'
   get 'welcome/demo'
   get 'welcome/intro'
   get 'welcome/blog'

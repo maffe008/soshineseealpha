@@ -4,6 +4,10 @@ class WelcomeController < ApplicationController
 
   end
 
+  def test
+
+  end
+
   def demo
 
   end
