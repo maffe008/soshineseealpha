@@ -164,7 +164,7 @@ function btn_val(){
 
 }
 
-function btn_nvdi(){
+function btn_ndvi(){
 
     isGroundOverlay = true;
 
@@ -294,21 +294,7 @@ function btn_spec(){
 
 }
 
-function btn_xy(){
-    flag_xy = flag_xy * -1;
-    if (flag_xy == 1){
-        map.addEventListener("click",xyfunction);
-        document.getElementById("btn_xy").style.backgroundColor = "#333333";
-        document.getElementById("btn_xy").style.color = "#f6f6f6";
-    }
-    else{
-        map.removeEventListener("click",xyfunction);
-        document.getElementById("btn_xy").style.backgroundColor = "#f6f6f6";
-        document.getElementById("btn_xy").style.color = "black";
-    }
 
-
-}
 
 function btn_draw(){
 
@@ -332,15 +318,30 @@ function btn_go(){
     map.centerAndZoom(keyPoint,15);
 }
 
+function xyfunction(e) {alert(e.point.lng + "," + e.point.lat);}
+function btn_xy(){
+    flag_xy = flag_xy * -1;
+    if (flag_xy == 1){
+        map.addEventListener("click",xyfunction);
+        document.getElementById("btn_xy").style.backgroundColor = "#333333";
+        document.getElementById("btn_xy").style.color = "#f6f6f6";
+    }
+    else{
+        map.removeEventListener("click",xyfunction);
+        document.getElementById("btn_xy").style.backgroundColor = "#f6f6f6";
+        document.getElementById("btn_xy").style.color = "black";
+    }
+}
+
 function btn_clear(){
 
     map.clearOverlays();
     isGroundOverlay = false;
 }
 
-function btn_point(){
+function pointinfo(e){
     var TILE_SIZE = 256;
-    map.addEventListener('click', function(e){
+    //map.addEventListener('click', function(e){
 
         var info = new BMap.InfoWindow('', {width: 260});
         var projection = this.getMapType().getProjection();
@@ -367,8 +368,24 @@ function btn_point(){
 
         info.setContent(lngLatStr + worldCoordStr + pixelCoordStr + tileCoordStr +
             viewportCoordStr + overlayCoordStr);
+
         map.openInfoWindow(info, lngLat);
-    });
+    //});
 }
+
+function btn_pointinfo(){
+    flag_xy = flag_xy * -1;
+    if (flag_xy == 1){
+        map.addEventListener("click",pointinfo);
+        document.getElementById("btn_xy").style.backgroundColor = "#333333";
+        document.getElementById("btn_xy").style.color = "#f6f6f6";
+    }
+    else{
+        map.removeEventListener("click",pointinfo);
+        document.getElementById("btn_xy").style.backgroundColor = "#f6f6f6";
+        document.getElementById("btn_xy").style.color = "black";
+    }
+}
+
 
 

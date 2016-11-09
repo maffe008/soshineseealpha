@@ -34,9 +34,13 @@ function focus_boluo_A(){
     currentblock = 1;
 
     document.getElementById("btn_nc").style.backgroundColor = "coral";
-    document.getElementById("btn_val").style.backgroundColor = "#999999";
-    document.getElementById("btn_nvdi").style.backgroundColor = "coral";
-    document.getElementById("btn_spec").style.backgroundColor = "#999999";
+    document.getElementById("btn_nc").style.color = "white";
+    document.getElementById("btn_val").style.backgroundColor = "lightgrey";
+    document.getElementById("btn_val").style.color = "grey";
+    document.getElementById("btn_ndvi").style.backgroundColor = "coral";
+    document.getElementById("btn_ndvi").style.color = "white";
+    document.getElementById("btn_spec").style.backgroundColor = "lightgrey";
+    document.getElementById("btn_spec").style.color = "grey";
 
 
 }
@@ -279,7 +283,7 @@ function focus_boluo_B(){
     currentblock = 2;
     document.getElementById("btn_nc").style.backgroundColor = "coral";
     document.getElementById("btn_val").style.backgroundColor = "coral";
-    document.getElementById("btn_nvdi").style.backgroundColor = "coral";
+    document.getElementById("btn_ndvi").style.backgroundColor = "coral";
     document.getElementById("btn_spec").style.backgroundColor = "#999999";
 
     //alert("该区域坐标有误")

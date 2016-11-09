@@ -32,7 +32,7 @@ function focus_test_A(){
     currentblock = 101;
     document.getElementById("btn_nc").style.backgroundColor = "#999999";
     document.getElementById("btn_val").style.backgroundColor = "#999999";
-    document.getElementById("btn_nvdi").style.backgroundColor = "#999999";
+    document.getElementById("btn_ndvi").style.backgroundColor = "#999999";
     document.getElementById("btn_spec").style.backgroundColor = "coral";
 }
 
@@ -175,7 +175,7 @@ function focus_test_B(){
     currentblock = 102;
     document.getElementById("btn_nc").style.backgroundColor = "#999999";
     document.getElementById("btn_val").style.backgroundColor = "#999999";
-    document.getElementById("btn_nvdi").style.backgroundColor = "#999999";
+    document.getElementById("btn_ndvi").style.backgroundColor = "#999999";
     document.getElementById("btn_spec").style.backgroundColor = "coral";
 }
 
