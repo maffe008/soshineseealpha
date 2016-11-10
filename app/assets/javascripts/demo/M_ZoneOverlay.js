@@ -15,6 +15,7 @@ ZoneOverlay.prototype = new BMap.Overlay();
 
 ZoneOverlay.prototype.initialize = function(map){
 
+
     this._map = map;
 
     var div = document.createElement("div");
@@ -28,6 +29,7 @@ ZoneOverlay.prototype.initialize = function(map){
     image.src = this._imageurl;
     image.width = this._width;
     image.height = this._height;
+    image.opacity(0.5);
     div.appendChild(image);
 
     div.style.backgroundColor = "white";
