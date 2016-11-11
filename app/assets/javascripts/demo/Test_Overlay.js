@@ -3,14 +3,7 @@
  */
 
 
-polygonOptions = {
-    strokeColor : "skyblue",
-    strokeStyle : "dashed",
-    strokeWeight : 2,
-    strokeOpacity : 0.8,
-    fillOpacity : 0.4,
-    fillColor : "red"
-};
+
 
 polygonOptions_under = {
     strokeColor : "red",

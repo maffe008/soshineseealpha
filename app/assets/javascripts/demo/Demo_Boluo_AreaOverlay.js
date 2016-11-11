@@ -23,6 +23,8 @@
 * */
 
 function focus_Demo_Block_Boluo_A(){
+
+    currentblock = "Boluo_A";
     //清除之前的覆盖物
     map.clearOverlays();
     //
@@ -61,7 +63,7 @@ function focus_Demo_Block_Boluo_B(){
     map.clearOverlays();
     //
     var Demo_Block_Boluo_B_centerP = new BMap.Point(114.205496,23.125436);
-    map.centerAndZoom(Demo_Block_Boluo_B_centerP, 19);  // 中心点坐标 地图级别
+    map.centerAndZoom(Demo_Block_Boluo_B_centerP, 18);  // 中心点坐标 地图级别
     //flag
     currentblock_has_nc =true;
     currentblock_has_infrared =false;
@@ -80,12 +82,22 @@ function focus_Demo_Block_Boluo_B(){
     document.getElementById("btn_spec").style.backgroundColor = "lightgrey";
     document.getElementById("btn_spec").style.color = "grey";
 
+    //add_AreaOverlay_Demo_Block_Boluo_B();
+}
+
+function add_AreaOverlay_Demo_Block_Boluo_B(){
+
     add_AreaOverlay_Demo_Block_Boluo_B_01();
     add_AreaOverlay_Demo_Block_Boluo_B_02();
     add_AreaOverlay_Demo_Block_Boluo_B_03();
+
 }
 
-
+function focus_Demo_Block_Boluo_B_01(){
+    //Boluo_BlockB01Center
+    var B_BB01C = new BMap.Point(114.205348,23.12603);
+    map.centerAndZoom(B_BB01C, 19);  // 中心点坐标 地图级别
+}
 function add_AreaOverlay_Demo_Block_Boluo_B_01(){
 
     //Boluo_BlockPoint01 ...
@@ -99,16 +111,15 @@ function add_AreaOverlay_Demo_Block_Boluo_B_01(){
     var B_BP12 = new BMap.Point(114.204449, 23.125473);
     //Boluo_BlockB01
     var B_BB01 = [B_BP01,B_BP02,B_BP03,B_BP04,B_BP07,B_BP08,B_BP09,B_BP12];
-    //Boluo_BlockB01Center
-    var B_BB01C = new BMap.Point(114.205348,23.12603);
 
     var AreaOverlay_Demo_Block_Boluo_B_01 = new BMap.Polygon(B_BB01, polygonOptions);
     map.addOverlay(AreaOverlay_Demo_Block_Boluo_B_01);
-
-    addEventListener("dbclick",function(){
-        map.centerAndZoom(B_BB01C, 19);  // 中心点坐标 地图级别
-    })
-
+    AreaOverlay_Demo_Block_Boluo_B_01.addEventListener("click",focus_Demo_Block_Boluo_B_01())
+}
+function focus_Demo_Block_Boluo_B_02(){
+    //Boluo_BlockB01Center
+    var B_BB02C = new BMap.Point(114.204818,23.125141);
+    map.centerAndZoom(B_BB02C, 19);  // 中心点坐标 地图级别
 }
 function add_AreaOverlay_Demo_Block_Boluo_B_02(){
 
@@ -119,15 +130,15 @@ function add_AreaOverlay_Demo_Block_Boluo_B_02(){
     var B_BP07 = new BMap.Point(114.205694, 23.125714);
     //Boluo_BlockB02
     var B_BB02 = [B_BP04,B_BP05,B_BP06,B_BP07];
-    //Boluo_BlockB01Center
-    var B_BB02C = new BMap.Point(114.204818,23.125141);
 
     var AreaOverlay_Demo_Block_Boluo_B_02 = new BMap.Polygon(B_BB02, polygonOptions);
     map.addOverlay(AreaOverlay_Demo_Block_Boluo_B_02);
-
-    addEventListener("dbclick",function(){
-        map.centerAndZoom(B_BB02C, 19);  // 中心点坐标 地图级别
-    })
+    AreaOverlay_Demo_Block_Boluo_B_02.addEventListener("click",focus_Demo_Block_Boluo_B_02())
+}
+function focus_Demo_Block_Boluo_B_03(){
+    //Boluo_BlockB01Center
+    var B_BB03C = new BMap.Point(114.206174,23.125316);
+    map.centerAndZoom(B_BB03C, 19);  // 中心点坐标 地图级别
 }
 function add_AreaOverlay_Demo_Block_Boluo_B_03(){
 
@@ -138,18 +149,16 @@ function add_AreaOverlay_Demo_Block_Boluo_B_03(){
     var B_BP12 = new BMap.Point(114.204449, 23.125473);
     //Boluo_BlockB01
     var B_BB03 = [B_BP09,B_BP10,B_BP11,B_BP12];
-    //Boluo_BlockB01Center
-    var B_BB03C = new BMap.Point(114.206174,23.125316);
 
     var AreaOverlay_Demo_Block_Boluo_B_03 = new BMap.Polygon(B_BB03, polygonOptions);
     map.addOverlay(AreaOverlay_Demo_Block_Boluo_B_03);
-
-    addEventListener("dbclick",function(){
-        map.centerAndZoom(B_BB03C, 19);  // 中心点坐标 地图级别
-    })
+    AreaOverlay_Demo_Block_Boluo_B_03.addEventListener("click",focus_Demo_Block_Boluo_B_03())
 }
 
+
 function focus_Demo_Block_Boluo_C(){
+
+    currentblock = "Boluo_C";
     //清除之前的覆盖物
     map.clearOverlays();
     //

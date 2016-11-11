@@ -34,7 +34,7 @@
             <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
                href="#panel-element-demo-Boluo-A" onclick="focus_Demo_Block_Boluo_A()">博罗县示例地块A</a>
           </div>
-          <div id="panel-element-demo-Boluo-A" class="panel-collapse collapse in">
+          <div id="panel-element-demo-Boluo-A" class="panel-collapse collapse">
             <div id="Demo_Block_Boluo_A_01" class="panel-body"
                  onmouseover="add_OutlineOverlay_Demo_Block_Boluo_A_01()" onmouseout="remove_OutlineOverlay()">
               <a class="btn-link" onclick="focus_Demo_Block_Boluo_A_01()">区域01|8水塘</a>
@@ -199,11 +199,10 @@
     <div class="col-md-10 column">
       <!--地图-->
       <div class="jumbotron">
-        <div id="demomap">
           <div id="allmap">
 
           </div>
-        </div>
+
 
       </div>
       <!--日期-->
@@ -240,21 +239,17 @@
 </body>
 
 <script type="text/javascript">
-  // 百度地图API功能
-  var map = new BMap.Map("allmap",{mapType:BMAP_NORMAL_MAP});    // 创建Map实例
-  //BMAP_NORMAL_MAP
-  //BMAP_HYBRID_MAP
-
+  // 百度地图API功能 BMAP_NORMAL_MAP BMAP_HYBRID_MAP
+  var map = new BMap.Map("allmap",{mapType:BMAP_HYBRID_MAP});    // 创建Map实例
   map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
   map.centerAndZoom(new BMap.Point(103, 34), 6);  // 初始化地图,设置中心点坐标和地图级别
-
-  var top_left_type = new BMap.MapTypeControl({anchor: BMAP_ANCHOR_TOP_LEFT,offset: new BMap.Size(75,25)})
-  var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT,offset: new BMap.Size(75,50)});// 左上角，添加比例尺
+  var top_left_type = new BMap.MapTypeControl({anchor: BMAP_ANCHOR_TOP_LEFT,offset: new BMap.Size(75,50)});
+  var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT,offset: new BMap.Size(75,25)});// 左上角，添加比例尺
   var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
   map.addControl(top_left_type);   //添加地图类型控件
   map.addControl(top_left_control);
-  map.addControl(top_left_navigation);map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-  //map.addEventListener("click",function(e){alert(e.point.lng + "," + e.point.lat);});
+  map.addControl(top_left_navigation);
+  map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
   map.setMapStyle({
     styleJson:[
@@ -269,14 +264,9 @@
     ]
   });
 
-  //var myDis = new BMapLib.DistanceTool(map);
+  $(function () {$(function () { $("[data-toggle='tooltip']").tooltip(); });});
 
-
-  $(function () {
-    $(function () { $("[data-toggle='tooltip']").tooltip(); });
-  });
-
-  currentblock = 0;
+  currentblock = undefined;
 
   currentblock_has_nc = false;
   currentblock_has_infrared = false;
@@ -286,11 +276,31 @@
 
   isGroundOverlay = false;
   polygon = new BMap.Polygon();
+  //Only one Zone is present at a time
   zoneOverlay = undefined;
+  //Only one Outline is present at a time
+  outlineOverlay = undefined;
 
   flag_xy = -1;
   flag_calculate = -1;
 
+  /* OutlineOverlay
+  * Divided Block Outline
+  * */
+  var polygonOptions = {
+    strokeColor : "skyblue",
+    strokeStyle : "dashed",
+    strokeWeight : 2,
+    strokeOpacity : 1,
+    fillOpacity : 0.5,
+    fillColor : "lightskyblue"
+  };
+
+  /*  drawingManager
+  * Options
+  * Instance
+  * EventListener
+  * */
   var styleOptions = {
     strokeColor:"skyblue",    //边线颜色。
     fillColor:"skyblue",      //填充颜色。当参数为空时，圆形将没有填充效果。
@@ -299,8 +309,8 @@
     fillOpacity: 0.5,      //填充的透明度，取值范围0 - 1。
     strokeStyle: 'dashed' //边线的样式，solid或dashed。
   };
-
-  drawingManager = new BMapLib.DrawingManager(map, {
+  //drawingManager Instance
+  var drawingManager = new BMapLib.DrawingManager(map, {
     isOpen: false, //是否开启绘制模式
     enableDrawingTool: true, //是否显示工具栏
     drawingToolOptions: {
@@ -313,7 +323,7 @@
     polygonOptions: styleOptions, //多边形的样式
     rectangleOptions: styleOptions //矩形的样式
   });
-
+  //drawingManager Calculate Done
   drawingManager.addEventListener("overlaycomplete", function(e) {
     var mode = e.drawingMode;
     var result = e.calculate;
@@ -323,25 +333,60 @@
 
     if(flag_calculate == 1){
       if(mode == "polyline"){
-        if(result<1000){
-          info.setContent(result + "米");
-        }
-        else{
-          info.setContent(result/1000 + "千米");
-        }
+        if(result<1000){info.setContent(result + "米");}
+        else{info.setContent(result/1000 + "千米");}
       }
       else{
-        if(result<1000000){
-          info.setContent(result + "平方米");
-        }
-        else{
-          info.setContent(result/1000000 + "平方千米");
-        }
+        if(result<1000000){info.setContent(result + "平方米");}
+        else{info.setContent(result/1000000 + "平方千米");}
       }
       map.openInfoWindow(info, ep);
     }
-
   });
+
+  /*  ZoneOverlay
+  * for NC\NDVI\INFRARED\etc.. image
+  * Can't work in other files
+  * TO BE WORK OUT WHY
+  */
+  function ZoneOverlay(WN,ES,imageurl){
+    this._WN = WN;
+    this._ES = ES;
+    this._imageurl = imageurl;
+  }
+  ZoneOverlay.prototype = new BMap.Overlay();
+  ZoneOverlay.prototype.initialize = function(map){
+    this._map = map;
+    var div = document.createElement("div");
+    div.style.position = "absolute";
+    this._width = this._map.pointToOverlayPixel(this._ES).x - this._map.pointToOverlayPixel(this._WN).x;
+    this._height = this._map.pointToOverlayPixel(this._ES).y - this._map.pointToOverlayPixel(this._WN).y;
+    div.style.width = this._width + "px";
+    div.style.height = this._height + "px";
+    var image = document.createElement("img");
+    image.src = this._imageurl;
+    image.width = this._width;
+    image.height = this._height;
+    div.style.opacity = 0.8;
+    div.style.zIndex = -9999;
+    div.appendChild(image);
+    map.getPanes().mapPane.appendChild(div);
+    this._div = div;
+    return div;
+  };
+  ZoneOverlay.prototype.draw = function(){
+    var position = this._map.pointToOverlayPixel(this._WN);
+    this._div.style.left = position.x + "px";
+    this._div.style.top = position.y + "px";
+  };
+
+  map.addEventListener("zoomstart",function(){
+      map.removeOverlay(zoneOverlay);
+  });
+  map.addEventListener("zoomend",function(){
+    map.addOverlay(zoneOverlay);
+  });
+
 
   var bp01 = new BMap.Point(114.203385,23.129844);
   var bp02 = new BMap.Point(114.203681,23.129844);
