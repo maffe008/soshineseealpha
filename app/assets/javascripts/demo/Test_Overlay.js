@@ -43,7 +43,7 @@ function add_overlay_test_A_1(){
         polygon = new BMap.Polygon(polygonPoints, polygonOptions_under);  //创建多边形
     }
     else {
-        polygon = new BMap.Polygon(polygonPoints, polygonOptions);
+        polygon = new BMap.Polygon(polygonPoints, OutlinepolygonOptions);
     }
     //map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
@@ -64,7 +64,7 @@ function add_overlay_test_A_2(){
         polygon = new BMap.Polygon(polygonPoints, polygonOptions_under);  //创建多边形
     }
     else {
-        polygon = new BMap.Polygon(polygonPoints, polygonOptions);
+        polygon = new BMap.Polygon(polygonPoints, OutlinepolygonOptions);
     }
     //map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
@@ -87,7 +87,7 @@ function add_overlay_test_A_3(){
         polygon = new BMap.Polygon(polygonPoints, polygonOptions_under);  //创建多边形
     }
     else {
-        polygon = new BMap.Polygon(polygonPoints, polygonOptions);
+        polygon = new BMap.Polygon(polygonPoints, OutlinepolygonOptions);
     }
     //map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
@@ -108,7 +108,7 @@ function add_overlay_test_A_4(){
         polygon = new BMap.Polygon(polygonPoints, polygonOptions_under);  //创建多边形
     }
     else {
-        polygon = new BMap.Polygon(polygonPoints, polygonOptions);
+        polygon = new BMap.Polygon(polygonPoints, OutlinepolygonOptions);
     }
     //map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
@@ -129,7 +129,7 @@ function add_overlay_test_A_5(){
         polygon = new BMap.Polygon(polygonPoints, polygonOptions_under);  //创建多边形
     }
     else {
-        polygon = new BMap.Polygon(polygonPoints, polygonOptions);
+        polygon = new BMap.Polygon(polygonPoints, OutlinepolygonOptions);
     }
     //map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
@@ -151,7 +151,7 @@ function add_overlay_test_A_6(){
         polygon = new BMap.Polygon(polygonPoints, polygonOptions_under);  //创建多边形
     }
     else {
-        polygon = new BMap.Polygon(polygonPoints, polygonOptions);
+        polygon = new BMap.Polygon(polygonPoints, OutlinepolygonOptions);
     }
     //map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
@@ -187,7 +187,7 @@ function add_overlay_test_B_2(){
         polygon = new BMap.Polygon(polygonPoints, polygonOptions_under);  //创建多边形
     }
     else {
-        polygon = new BMap.Polygon(polygonPoints, polygonOptions);
+        polygon = new BMap.Polygon(polygonPoints, OutlinepolygonOptions);
     }
     //map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
@@ -209,7 +209,7 @@ function add_overlay_test_B_3(){
         polygon = new BMap.Polygon(polygonPoints, polygonOptions_under);  //创建多边形
     }
     else {
-        polygon = new BMap.Polygon(polygonPoints, polygonOptions);
+        polygon = new BMap.Polygon(polygonPoints, OutlinepolygonOptions);
     }
     //map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物
@@ -231,7 +231,7 @@ function add_overlay_test_B_4(){
         polygon = new BMap.Polygon(polygonPoints, polygonOptions_under);  //创建多边形
     }
     else {
-        polygon = new BMap.Polygon(polygonPoints, polygonOptions);
+        polygon = new BMap.Polygon(polygonPoints, OutlinepolygonOptions);
     }
     //map.clearOverlays();
     map.addOverlay(polygon);           //增加多边形覆盖物

@@ -20,6 +20,7 @@
   <div class="row clearfix">
     <!--侧边栏-->
     <div class="col-md-2 column">
+      <p id="temp"></p>
       <!--侧边栏|折叠-->
       <div class="panel-group" id="panel-100">
         <div class="panel panel-default">
@@ -105,19 +106,15 @@
           <div id="panel-element-demo-Boluo-C" class="panel-collapse collapse">
             <div id="Demo_Block_Boluo_C_01" class="panel-body"
                  onmouseover="add_OutlineOverlay_Demo_Block_Boluo_C_01()" onmouseout="remove_OutlineOverlay()">
-              <a class="btn-link" onclick="focus_Demo_Block_Boluo_C_01()">区域01|西农田</a>
+              <a class="btn-link" onclick="focus_Demo_Block_Boluo_C_01()">区域01|跨树林农田</a>
             </div>
             <div id="Demo_Block_Boluo_C_02" class="panel-body"
                  onmouseover="add_OutlineOverlay_Demo_Block_Boluo_C_02()" onmouseout="remove_OutlineOverlay()">
-              <a class="btn-link" onclick="focus_Demo_Block_Boluo_C_02()">区域02|跨树林农田</a>
+              <a class="btn-link" onclick="focus_Demo_Block_Boluo_C_02()">区域02|小块农田</a>
             </div>
             <div id="Demo_Block_Boluo_C_03" class="panel-body"
                  onmouseover="add_OutlineOverlay_Demo_Block_Boluo_C_03()" onmouseout="remove_OutlineOverlay()">
-              <a class="btn-link" onclick="focus_Demo_Block_Boluo_C_03()">区域03|小块农田</a>
-            </div>
-            <div id="Demo_Block_Boluo_C_04" class="panel-body"
-                 onmouseover="add_OutlineOverlay_Demo_Block_Boluo_C_04()" onmouseout="remove_OutlineOverlay()">
-              <a class="btn-link" onclick="focus_Demo_Block_Boluo_C_04()">区域04|东农田</a>
+              <a class="btn-link" onclick="focus_Demo_Block_Boluo_C_03()">区域03|东农田</a>
             </div>
           </div>
 
@@ -285,9 +282,9 @@
   flag_calculate = -1;
 
   /* OutlineOverlay
-  * Divided Block Outline
-  * */
-  var polygonOptions = {
+   * Divided Block Outline
+   * */
+  var OutlinepolygonOptions = {
     strokeColor : "skyblue",
     strokeStyle : "dashed",
     strokeWeight : 2,
@@ -295,6 +292,7 @@
     fillOpacity : 0.5,
     fillColor : "lightskyblue"
   };
+
 
   /*  drawingManager
   * Options
@@ -349,10 +347,11 @@
   * Can't work in other files
   * TO BE WORK OUT WHY
   */
-  function ZoneOverlay(WN,ES,imageurl){
+  function ZoneOverlay(WN,ES,imageurl,alpha){
     this._WN = WN;
     this._ES = ES;
     this._imageurl = imageurl;
+    this._alpha = alpha;
   }
   ZoneOverlay.prototype = new BMap.Overlay();
   ZoneOverlay.prototype.initialize = function(map){
@@ -367,7 +366,7 @@
     image.src = this._imageurl;
     image.width = this._width;
     image.height = this._height;
-    div.style.opacity = 0.8;
+    div.style.opacity = this._alpha;
     div.style.zIndex = -9999;
     div.appendChild(image);
     map.getPanes().mapPane.appendChild(div);
