@@ -25,6 +25,7 @@ body{
   padding-top: 50px;
   font-family: "Microsoft YaHei";
   overflow-y: auto;
+  background-image: url(demo/indexbg.png);
 
 }
 nav.navbar.navbar-default.navbar-fixed-top{
@@ -38,7 +39,15 @@ div.navbar-header{
 div.container{
 
 }
-
+div#index{
+  margin-top: 90px;
+}
+div#index_left{
+  border-right: 3px solid grey;
+}
+div#index_right{
+  border-left: 3px solid grey;
+}
 
 tr.tiff{
   background-color: gold;

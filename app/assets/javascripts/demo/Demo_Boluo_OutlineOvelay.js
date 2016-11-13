@@ -15,27 +15,6 @@ function remove_OutlineOverlay(){
     map.removeOverlay(outlineOverlay)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function add_OutlineOverlay_Demo_Block_Boluo_A_01(){
     //Boluo_BlockPoint01 ...
     var B_AP01= new BMap.Point(114.203604,23.129237);
@@ -85,6 +64,7 @@ function add_OutlineOverlay_Demo_Block_Boluo_A_04(){
     outlineOverlay = new BMap.Polygon(B_AB04, OutlinepolygonOptions);
     map.addOverlay(outlineOverlay);
 }
+
 function add_OutlineOverlay_Demo_Block_Boluo_A_05(){
     //Boluo_BlockPoint01 ...
     var B_AP06= new BMap.Point(114.206757,23.132407);
@@ -98,16 +78,17 @@ function add_OutlineOverlay_Demo_Block_Boluo_A_05(){
     outlineOverlay = new BMap.Polygon(B_AB05, OutlinepolygonOptions);
     map.addOverlay(outlineOverlay);
 }
+
 function add_OutlineOverlay_Demo_Block_Boluo_A_06(){
     //Boluo_BlockPoint01 ...
-    var B_AP26= new BMap.Point(114.206834,23.130425);
-    var B_AP27= new BMap.Point(114.207719,23.130513);
-    var B_AP28= new BMap.Point(114.208038,23.130488);
     var B_AP18= new BMap.Point(114.207813,23.129873);
     var B_AP19= new BMap.Point(114.207543,23.128689);
     var B_AP20= new BMap.Point(114.206713,23.12898);
     var B_AP25= new BMap.Point(114.206775,23.129457);
-    var B_AB06 = [B_AP26,B_AP27,B_AP28,B_AP18,B_AP19,B_AP20,B_AP25];
+    var B_AP26= new BMap.Point(114.206834,23.130425);
+    var B_AP27= new BMap.Point(114.207719,23.130513);
+    var B_AP28= new BMap.Point(114.208038,23.130488);
+    var B_AB06 = [B_AP18,B_AP19,B_AP20,B_AP25,B_AP26,B_AP27,B_AP28];
     //Boluo_BlockB01
     map.removeOverlay(outlineOverlay);
     outlineOverlay = new BMap.Polygon(B_AB06, OutlinepolygonOptions);
@@ -122,7 +103,7 @@ function add_OutlineOverlay_Demo_Block_Boluo_A_07(){
     var B_AP30= new BMap.Point(114.208473,23.131086);
     var B_AP31= new BMap.Point(114.208734,23.131165);
     var B_AP32= new BMap.Point(114.208815,23.130982);
-    var B_AP33= new BMap.Point(114.209187,23.13104);
+    var B_AP33= new BMap.Point(114.209039,23.131007);
     var B_AP37= new BMap.Point(114.208734,23.131551);
     var B_AP38= new BMap.Point(114.208388,23.131456);
     var B_AB07 = [B_AP08,B_AP27,B_AP28,B_AP29,B_AP30,B_AP31,B_AP32,B_AP33,B_AP37,B_AP38];
@@ -133,7 +114,7 @@ function add_OutlineOverlay_Demo_Block_Boluo_A_07(){
 }
 function add_OutlineOverlay_Demo_Block_Boluo_A_08(){
     //Boluo_BlockPoint01 ...
-    var B_AP08= new BMap.Point(114.207831,23.132332);
+    var B_AP08= new BMap.Point(114.207916,23.132311);
     var B_AP09= new BMap.Point(114.208496,23.132465);
     var B_AP10= new BMap.Point(114.208891,23.132407);
     var B_AP11= new BMap.Point(114.2093,23.132012);
@@ -154,10 +135,11 @@ function add_OutlineOverlay_Demo_Block_Boluo_A_09(){
     var B_AP35= new BMap.Point(114.208756,23.132021);
     var B_AP36= new BMap.Point(114.208532,23.131938);
     var B_AP37= new BMap.Point(114.208734,23.131551);
-    var B_AP33= new BMap.Point(114.209187,23.13104);
+    var B_AP33= new BMap.Point(114.209039,23.131007);
+    var B_AP33_12= new BMap.Point(114.209286,23.131086);
     var B_AP12= new BMap.Point(114.209884,23.131609);
     var B_AP11= new BMap.Point(114.2093,23.132012);
-    var B_AB09 = [B_AP34,B_AP35,B_AP36,B_AP37,B_AP33,B_AP12,B_AP11];
+    var B_AB09 = [B_AP34,B_AP35,B_AP36,B_AP37,B_AP33,B_AP33_12,B_AP12,B_AP11];
     //Boluo_BlockB01
     map.removeOverlay(outlineOverlay);
     outlineOverlay = new BMap.Polygon(B_AB09, OutlinepolygonOptions);
