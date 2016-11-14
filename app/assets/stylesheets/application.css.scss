@@ -36,17 +36,42 @@ div.navbar-header{
 
 }
 
-div.container{
-
+div.container#task{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: #F2F7F9;
+}
+div.container#data{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: #F2F7F9;
 }
 div#index{
+
+}
+div.jumbotron#index{
   margin-top: 90px;
+  background-color: #fefefe ;
 }
 div#index_left{
-  border-right: 3px solid grey;
+  height: 280px;
+  border-right: 6px solid #F2F7F9;
 }
 div#index_right{
-  border-left: 3px solid grey;
+  height: 300px;
+  //border-left: 3px solid #F2F7F9;
+}
+button#login{
+  width: 100%;
+}
+button#register{
+  margin-top: 10px;
+  width: 100%;
+}
+div.index-slide-text{
+  background-color: rgba(199,199,199,0.5);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 tr.tiff{
