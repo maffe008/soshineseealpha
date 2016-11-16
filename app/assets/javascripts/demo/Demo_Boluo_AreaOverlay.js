@@ -58,7 +58,7 @@ function focus_Demo_Block_Boluo_A(){
     document.getElementById("btn_val").style.color = "grey";
     document.getElementById("btn_spec").style.backgroundColor = "lightgrey";
     document.getElementById("btn_spec").style.color = "grey";
-
+    add_ZoneOverlay_Demo_Block_Boluo_A_nc();
     add_AreaOverlay_Demo_Block_A();
 }
 
@@ -119,8 +119,8 @@ function focus_Demo_Block_Boluo_A_04(){
 function focus_Demo_Block_Boluo_A_05(){
     //Boluo_BlockB01Center
     refreshzone();
-    var B_AB06C = new BMap.Point(114.207319,23.131506);
-    map.centerAndZoom(B_AB06C, 19);  // 中心点坐标 地图级别
+    var B_AB05C = new BMap.Point(114.207319,23.131506);
+    map.centerAndZoom(B_AB05C, 19);  // 中心点坐标 地图级别
 }
 function focus_Demo_Block_Boluo_A_06(){
     //Boluo_BlockB01Center
@@ -179,7 +179,7 @@ function focus_Demo_Block_Boluo_B(){
     document.getElementById("btn_val").style.color = "grey";
     document.getElementById("btn_spec").style.backgroundColor = "lightgrey";
     document.getElementById("btn_spec").style.color = "grey";
-
+    add_ZoneOverlay_Demo_Block_Boluo_B_nc();
     add_AreaOverlay_Demo_Block_Boluo_B();
 }
 function add_AreaOverlay_Demo_Block_Boluo_B(){
@@ -245,7 +245,7 @@ function focus_Demo_Block_Boluo_C(){
     document.getElementById("btn_val").style.color = "grey";
     document.getElementById("btn_spec").style.backgroundColor = "lightgrey";
     document.getElementById("btn_spec").style.color = "grey";
-
+    add_ZoneOverlay_Demo_Block_Boluo_C_nc();
     add_AreaOverlay_Demo_Block_Boluo_C();
 }
 function add_AreaOverlay_Demo_Block_Boluo_C(){

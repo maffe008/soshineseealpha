@@ -4,53 +4,7 @@
 
 
 function btn_nc(){
-
-
-
-    function boluo_A_nc(){
-        //kml <label>
-        var offset = 0.00026;
-        var ggn = 23.130875645889883-offset;
-        var ggs = 23.121166927809885-offset;
-        var gge = 114.20237471986587;
-        var ggw = 114.19187761906588;
-
-        //ABCD Point
-        var enP = new BMap.Point(gge,ggn);
-        var wsP = new BMap.Point(ggw,ggs);
-
-        var points = [enP,wsP];
-
-        translateCallback = function (data){
-            if(data.status === 0) {
-                var BenP = data.points[0];
-                var BwsP = data.points[1];
-
-                groundOverlayOptions = {
-                    opacity: 0.8,
-                    displayOnMinLevel: 10,
-                    displayOnMaxLevel: 20
-                }
-
-                // 初始化GroundOverlay
-                var groundOverlay = new BMap.GroundOverlay(new BMap.Bounds(BwsP, BenP), groundOverlayOptions);
-
-                // 设置GroundOverlay的图片地址
-                groundOverlay.setImageURL('/assets/demo/soshineseeA/boluo_A_nc_s.jpg');
-                // 添加GroundOverlay
-                map.clearOverlays();
-                map.addOverlay(groundOverlay);
-
-            }
-        };
-
-        var convertor = new BMap.Convertor();
-        convertor.translate(points, 1, 5, translateCallback);
-    }
-
     switch (currentblock){
-        case 1:
-            boluo_A_nc();break;
         case "Boluo_A":
             add_ZoneOverlay_Demo_Block_Boluo_A_nc();break;
         case "Boluo_B":
@@ -58,37 +12,26 @@ function btn_nc(){
         case "Boluo_C":
             add_ZoneOverlay_Demo_Block_Boluo_C_nc();break;
         default:
-            alert("本地块无可见光图像");
     }
-
 }
-
-
-
 
 function btn_infrared(){
-
-    isGroundOverlay = true;
-
-    if (currentblock == 1){
-        alert("1");
-    }
-    else if(currentblock == 2){
-        alert("2");
-    }
-    else{
-        alert("本地块无NC图像");
+    switch (currentblock) {
+        case "Boluo_A":
+            add_ZoneOverlay_Demo_Block_Boluo_A_infrared();
+            break;
+        case "Boluo_B":
+            add_ZoneOverlay_Demo_Block_Boluo_B_infrared();
+            break;
+        case "Boluo_C":
+            add_ZoneOverlay_Demo_Block_Boluo_C_infrared();
+            break;
+        default:
     }
 }
 
-
-
 function btn_ndvi(){
-
     switch (currentblock) {
-        case 1:
-            boluo_A_nc();
-            break;
         case "Boluo_A":
             add_ZoneOverlay_Demo_Block_Boluo_A_ndvi();
             break;
@@ -99,42 +42,22 @@ function btn_ndvi(){
             add_ZoneOverlay_Demo_Block_Boluo_C_ndvi();
             break;
         default:
-            alert("本地块无可见光图像");
     }
 }
 
 function btn_val(){
+    switch (currentblock) {
+        default:
 
-    isGroundOverlay = true;
-
-    if (currentblock == 1){
-        alert("1");
     }
-    else if(currentblock == 2){
-        alert("2");
-    }
-    else{
-        alert("本地块无VAL图像");
-    }
-
-
 }
 
 function btn_spec(){
 
-    isGroundOverlay = true;
+    switch (currentblock) {
+        default:
 
-    if (currentblock == 1){
-        alert("1");
     }
-    else if(currentblock == 2){
-        alert("2");
-    }
-    else{
-        alert("本地块无SPEC图像");
-    }
-
-
 }
 
 

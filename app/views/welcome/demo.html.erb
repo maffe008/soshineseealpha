@@ -11,9 +11,10 @@
   <!--加载检索信息窗口-->
   <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.js"></script>
   <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.4/src/SearchInfoWindow_min.css" />
-
+  <!--加载检索信息窗口-->
   <script type="text/javascript" src="http://api.map.baidu.com/library/TextIconOverlay/1.2/src/TextIconOverlay_min.js"></script>
   <script type="text/javascript" src="http://api.map.baidu.com/library/MarkerClusterer/1.2/src/MarkerClusterer_min.js"></script>
+
 
 
 
@@ -161,18 +162,6 @@
             </div>
           </div>
 
-          <div class="panel-heading">
-            <a class="panel-title" data-toggle="collapse" data-parent="#panel-100"
-               href="#panel-element-alpha1" onclick="focus_boluo_A()">博罗县示例地块</a>
-          </div>
-          <div id="panel-element-alpha1" class="panel-collapse collapse">
-            <div id="boluo_block_A_all" class="panel-body"
-                 onmouseover="add_overlay_boluo_A_all()" onmouseout="remove_boluo_overlay()">
-              1-1地块细化示例区域
-            </div>
-          </div>
-
-
         </div>
       </div>
 
@@ -200,10 +189,7 @@
       <!--地图-->
       <div class="jumbotron">
           <div id="allmap">
-
           </div>
-
-
       </div>
       <!--日期-->
 
@@ -212,7 +198,7 @@
         <button type="button" class="btn btn-default" id="btn_nc" data-toggle="tooltip"
                 data-placement="right" title="高清航拍图" onclick="btn_nc()">可见光</button>
         <button type="button" class="btn btn-default" id="btn_infrared" data-toggle="tooltip"
-                data-placement="right" title="NDVI图" onclick="btn_infrared()">红外线</button>
+                data-placement="right" title="红外线图" onclick="btn_infrared()">红外线</button>
         <button type="button" class="btn btn-default" id="btn_ndvi" data-toggle="tooltip"
                 data-placement="right" title="NDVI图" onclick="btn_ndvi()">NDVI</button>
         <button type="button" class="btn btn-default" id="btn_val" data-toggle="tooltip"
@@ -228,6 +214,7 @@
         <button type="button" class="btn btn-default" id="btn_go" data-toggle="tooltip"
                 data-placement="right" title="导航"  onclick="btn_go()">GO</button>
         -->
+
         <button type="button" class="btn btn-default" id="btn_clear" data-toggle="tooltip"
                 data-placement="right" title="清除叠加图"  onclick="btn_clear()">清空</button>
       </div>
@@ -252,17 +239,47 @@
   map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
 
-  var Demo_Block_Boluo_A_centerP_C = new BMap.Point(114.207521,23.129985);
-  var Demo_Block_Boluo_B_centerP_C = new BMap.Point(114.205496,23.125436);
-  var Demo_Block_Boluo_C_centerP_C = new BMap.Point(114.209732,23.128626);
-  var Demo_Block_Boluo_D_centerP_C = new BMap.Point(115.992803,39.490072);
-  var Demo_Block_Boluo_E_centerP_C = new BMap.Point(115.992803,39.493072);
+  var B_AB01CM = new BMap.Point(114.204408,23.128789);
+  var B_AB02CM = new BMap.Point(114.205338,23.129786);
+  var B_AB03CM = new BMap.Point(114.206012,23.128955);
+  var B_AB04CM = new BMap.Point(114.206344,23.130384);
+  var B_AB05CM = new BMap.Point(114.207319,23.131506);
+  var B_AB06CM = new BMap.Point(114.207305,23.129678);
+  var B_AB07CM = new BMap.Point(114.208186,23.131206);
+  var B_AB08CM = new BMap.Point(114.208608,23.132029);
+  var B_AB09CM = new BMap.Point(114.209228,23.13153);
+  var B_AB10CM = new BMap.Point(114.209461,23.130724);
+  var B_BB01CM = new BMap.Point(114.205348,23.12603);
+  var B_BB02CM = new BMap.Point(114.204818,23.125141);
+  var B_BB03CM = new BMap.Point(114.206174,23.125316);
+  var B_CB01CM = new BMap.Point(114.209395,23.128007);
+  var B_CB02CM = new BMap.Point(114.210163,23.128115);
+  var B_CB03CM = new BMap.Point(114.210199,23.129154);
+  var Demo_Block_Zhuo_A_CM = new BMap.Point(115.992803,39.490072);
+  var Demo_Block_Zhuo_B_CM = new BMap.Point(115.992803,39.493072);
+
+  var myIcon = new BMap.Icon("/assets/demo/mkr_orange_20.png", new BMap.Size(20,27));
+
   var markers = [];
-  markers.push(new BMap.Marker(Demo_Block_Boluo_A_centerP_C));
-  markers.push(new BMap.Marker(Demo_Block_Boluo_B_centerP_C));
-  markers.push(new BMap.Marker(Demo_Block_Boluo_C_centerP_C));
-  markers.push(new BMap.Marker(Demo_Block_Boluo_D_centerP_C));
-  markers.push(new BMap.Marker(Demo_Block_Boluo_E_centerP_C));
+  markers.push(new BMap.Marker(B_AB01CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_AB02CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_AB03CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_AB04CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_AB05CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_AB06CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_AB07CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_AB08CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_AB09CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_AB10CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_BB01CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_BB02CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_BB03CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_CB01CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_CB02CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(B_CB03CM,{icon:myIcon}));
+
+  markers.push(new BMap.Marker(Demo_Block_Zhuo_A_CM,{icon:myIcon}));
+  markers.push(new BMap.Marker(Demo_Block_Zhuo_B_CM,{icon:myIcon}));
   var markerClusterer = new BMapLib.MarkerClusterer(map,{markers:markers});
 
   map.setMapStyle({
