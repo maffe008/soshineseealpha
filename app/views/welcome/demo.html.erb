@@ -185,18 +185,22 @@
     </div>
     <!--主体-->
     <div class="col-md-10 column">
-      <div id="hdmap" style="background-color: black;height:0;width:auto;overflow:auto; ">
-        <div style="height: 0">
+
+      <div id="hdmap" style="background-color: black; width:100%;height:100%;overflow: auto; display: none">
+        <div>
           <button type="button" class="btn btn-default" id="btn_close" data-toggle="tooltip"
-                  data-placement="right" title="close"  onclick="btn_close()" style="position: relative;">CLOSE</button>
+                  data-placement="right" title="close"  onclick="btn_close()"
+                  style="position: absolute; left: 50px; top:50px">CLOSE
+          </button>
         </div>
-        <img src="/assets/demo/hd/Demo_Block_Boluo_B_1hd.png" >
+        <img id="hdimg" src="/assets/demo/hd/nohdimg.png" >
       </div>
       <!--地图-->
       <div class="jumbotron">
           <div id="allmap">
           </div>
       </div>
+
       <!--日期-->
 
       <!--类型-->
@@ -219,9 +223,10 @@
         <!--
         <button type="button" class="btn btn-default" id="btn_go" data-toggle="tooltip"
                 data-placement="right" title="导航"  onclick="btn_go()">GO</button>
-        -->
+
         <button type="button" class="btn btn-default" id="btn_hd" data-toggle="tooltip"
-                data-placement="right" title="HD"  onclick="btn_hd()">HD</button>
+                data-placement="right" title="HD"  onclick="show_hd('/assets/demo/hd/Demo_Block_Boluo_C_1hd.png')">HD</button>
+        -->
         <button type="button" class="btn btn-default" id="btn_clear" data-toggle="tooltip"
                 data-placement="right" title="清除叠加图"  onclick="btn_clear()">清空</button>
       </div>
@@ -267,24 +272,58 @@
 
   var myIcon = new BMap.Icon("/assets/demo/mkr_orange_20.png", new BMap.Size(20,27));
 
-  var markers = [];
-  markers.push(new BMap.Marker(B_AB01CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_AB02CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_AB03CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_AB04CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_AB05CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_AB06CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_AB07CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_AB08CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_AB09CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_AB10CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_BB01CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_BB02CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_BB03CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_CB01CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_CB02CM,{icon:myIcon}));
-  markers.push(new BMap.Marker(B_CB03CM,{icon:myIcon}));
+  var B_AB01CMkr = new BMap.Marker(B_AB01CM,{icon:myIcon});
+  B_AB01CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_1hd.png");});
+  var B_AB02CMkr = new BMap.Marker(B_AB02CM,{icon:myIcon});
+  B_AB02CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_2hd.png");});
+  var B_AB03CMkr = new BMap.Marker(B_AB03CM,{icon:myIcon});
+  B_AB03CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_3hd.png");});
+  var B_AB04CMkr = new BMap.Marker(B_AB04CM,{icon:myIcon});
+  B_AB04CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_4hd.png");});
+  var B_AB05CMkr = new BMap.Marker(B_AB05CM,{icon:myIcon});
+  B_AB05CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_5hd.png");});
+  var B_AB06CMkr = new BMap.Marker(B_AB06CM,{icon:myIcon});
+  B_AB06CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_6hd.png");});
+  var B_AB07CMkr = new BMap.Marker(B_AB07CM,{icon:myIcon});
+  B_AB07CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_7hd.png");});
+  var B_AB08CMkr = new BMap.Marker(B_AB08CM,{icon:myIcon});
+  B_AB08CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_8hd.png");});
+  var B_AB09CMkr = new BMap.Marker(B_AB09CM,{icon:myIcon});
+  B_AB09CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_9hd.png");});
+  var B_AB10CMkr = new BMap.Marker(B_AB10CM,{icon:myIcon});
+  B_AB10CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_10hd.png");});
 
+  var B_BB01CMkr = new BMap.Marker(B_BB01CM,{icon:myIcon});
+  B_BB01CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_B_1hd.png");});
+  var B_BB02CMkr = new BMap.Marker(B_BB02CM,{icon:myIcon});
+  B_BB02CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_B_2hd.png");});
+  var B_BB03CMkr = new BMap.Marker(B_BB03CM,{icon:myIcon});
+  B_BB03CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_B_3hd.png");});
+
+  var B_CB01CMkr = new BMap.Marker(B_CB01CM,{icon:myIcon});
+  B_CB01CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_C_1hd.png");});
+  var B_CB02CMkr = new BMap.Marker(B_CB02CM,{icon:myIcon});
+  B_CB02CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_C_2hd.png");});
+  var B_CB03CMkr = new BMap.Marker(B_CB03CM,{icon:myIcon});
+  B_CB03CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_C_3hd.png");});
+
+  var markers = [];
+  markers.push(B_AB01CMkr);
+  markers.push(B_AB02CMkr);
+  markers.push(B_AB03CMkr);
+  markers.push(B_AB04CMkr);
+  markers.push(B_AB05CMkr);
+  markers.push(B_AB06CMkr);
+  markers.push(B_AB07CMkr);
+  markers.push(B_AB08CMkr);
+  markers.push(B_AB09CMkr);
+  markers.push(B_AB10CMkr);
+  markers.push(B_BB01CMkr);
+  markers.push(B_BB02CMkr);
+  markers.push(B_BB03CMkr);
+  markers.push(B_CB01CMkr);
+  markers.push(B_CB02CMkr);
+  markers.push(B_CB03CMkr);
   markers.push(new BMap.Marker(Demo_Block_Zhuo_A_CM,{icon:myIcon}));
   markers.push(new BMap.Marker(Demo_Block_Zhuo_B_CM,{icon:myIcon}));
   var markerClusterer = new BMapLib.MarkerClusterer(map,{markers:markers});
@@ -435,10 +474,20 @@
     document.getElementById("hdmap").style.height="100%";
     document.getElementById("allmap").style.height="0";
   }
+
   function btn_close(){
-    document.getElementById("hdmap").style.height="0";
-    document.getElementById("allmap").style.height="100%";
+    document.getElementById("hdmap").style.display="none";
+    document.getElementById("allmap").style.display="block";
   }
 
 
+  function show_hd(hdimageurl){
+    var hdimg = document.getElementById("hdimg");
+    hdimg.src = hdimageurl;
+    document.getElementById("hdmap").style.display="block";
+    //document.getElementById("hdmap").style.height ="auto";
+    //document.getElementById("hdmap").style.width = "auto";
+    //document.getElementById("hdmap").style.overflow="auto";
+    document.getElementById("allmap").style.display="none";
+  }
 </script>
