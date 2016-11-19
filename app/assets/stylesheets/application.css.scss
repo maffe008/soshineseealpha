@@ -227,5 +227,47 @@ body.demo {
     background-color: #f6f6f6;
 
   }
+  div#hdmap{
+    background-color: black;
+    width: 100%;
+    height:100%;
+    overflow: auto;
+    display: none
+  }
+  div#hdmapinfo{
+    position: absolute;
+    margin-left:10px;
+    margin-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    width: 200px;
+    height: 300px;
+    background-color:  rgba(66,66,66,0.8);
+  }
+  h3.hdmapinfo-content{
+    color: white;
+  }
+  h6.hdmapinfo-content{
+    color: white;
+  }
+  p.hdmapinfo-content{
+    color: white;
+  }
+  div#hdmapinfo-status{
+    margin-bottom: 10px;
+    padding: 0;
+    border-radius: 2px;
+  }
+  td.hdmapinfo-td{
+    color: white;
+    font-size:x-small;
+    padding-right: 5px;
+  }
+  button#btn_close{
+    position: absolute;
+    bottom: 10px ;
+    left:10%;
+    width: 80%;
+  }
 }
 
