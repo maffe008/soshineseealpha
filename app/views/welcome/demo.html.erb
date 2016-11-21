@@ -234,9 +234,9 @@
         <button type="button" class="btn btn-default" id="btn_ndvi" data-toggle="tooltip"
                 data-placement="right" title="NDVI图" onclick="btn_ndvi()">NDVI</button>
         <button type="button" class="btn btn-default" id="btn_val" data-toggle="tooltip"
-                data-placement="right" title="VALUE图"  onclick="btn_val()">VAL</button>
+                data-placement="right" title="VALUE图"  onclick="btn_val()">高程图</button>
         <button type="button" class="btn btn-default" id="btn_spec" data-toggle="tooltip"
-                data-placement="right" title="地块特殊图" onclick="btn_spec()">SPEC</button>
+                data-placement="right" title="地块特殊图" onclick="btn_spec()">特殊图</button>
         <br/>
         <button type="button" class="btn btn-default" id="btn_xy" data-toggle="tooltip"
                 data-placement="right" title="获取点坐标"  onclick="btn_pointinfo()">坐标</button>
@@ -508,9 +508,7 @@
     var hdimg = document.getElementById("hdimg");
     hdimg.src = hdimageurl;
     document.getElementById("hdmap").style.display="block";
-    //document.getElementById("hdmap").style.height ="auto";
-    //document.getElementById("hdmap").style.width = "auto";
-    //document.getElementById("hdmap").style.overflow="auto";
     document.getElementById("allmap").style.display="none";
+
   }
 </script>
