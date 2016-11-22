@@ -188,25 +188,25 @@
 
       <div id="hdmap">
         <div id="hdmapinfo">
-          <h3 class="hdmapinfo-content">博罗县地块A01</h3>
+          <h3 class="hdmapinfo-content" id="hdtitle">博罗县地块***</h3>
           <div class="alert alert-info" id="hdmapinfo-status">
             状态:正常
           </div>
           <table>
             <tr>
-              <td class="hdmapinfo-td">N:23.129632 </td>
-              <td class="hdmapinfo-td">S:23.127825 </td>
+              <td class="hdmapinfo-td" id="hdcordN">N:23.xxxxxx </td>
+              <td class="hdmapinfo-td" id="hdcordS">S:23.yyyyyy </td>
             </tr>
             <tr>
-              <td class="hdmapinfo-td">W:114.203604 </td>
-              <td class="hdmapinfo-td">E:114.205437 </td>
+              <td class="hdmapinfo-td" id="hdcordW">W:114.xxxxxx </td>
+              <td class="hdmapinfo-td" id="hdcordE">E:114.yyyyyy </td>
             </tr>
           </table>
 
-          <h6 class="hdmapinfo-content">面积:22388㎡</h6>
-          <h6 class="hdmapinfo-content">日期:2016/03/15</h6>
-          <h6 class="hdmapinfo-content">作物:玉米</h6>
-          <p class="hdmapinfo-content">
+          <h6 class="hdmapinfo-content" id="hdm2">面积:*****㎡</h6>
+          <h6 class="hdmapinfo-content" id="hddate">日期:201x/xx/xx</h6>
+          <h6 class="hdmapinfo-content" id="hdproduct">作物:作物名</h6>
+          <p class="hdmapinfo-content" id="hdinfo">
             无
           </p>
 
@@ -295,40 +295,39 @@
   var myIcon = new BMap.Icon("/assets/demo/mkr_orange_20.png", new BMap.Size(20,27));
 
   var B_AB01CMkr = new BMap.Marker(B_AB01CM,{icon:myIcon});
-  B_AB01CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_1hd.png");});
+  B_AB01CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_1hd.png","A01");});
   var B_AB02CMkr = new BMap.Marker(B_AB02CM,{icon:myIcon});
-  B_AB02CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_2hd.png");});
+  B_AB02CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_2hd.png","A02");});
   var B_AB03CMkr = new BMap.Marker(B_AB03CM,{icon:myIcon});
-  B_AB03CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_3hd.png");});
+  B_AB03CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_3hd.png","A03");});
   var B_AB04CMkr = new BMap.Marker(B_AB04CM,{icon:myIcon});
-  B_AB04CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_4hd.png");});
+  B_AB04CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_4hd.png","A04");});
   var B_AB05CMkr = new BMap.Marker(B_AB05CM,{icon:myIcon});
-  B_AB05CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_5hd.png");});
+  B_AB05CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_5hd.png","A05");});
   var B_AB06CMkr = new BMap.Marker(B_AB06CM,{icon:myIcon});
-  B_AB06CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_6hd.png");});
+  B_AB06CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_6hd.png","A06");});
   var B_AB07CMkr = new BMap.Marker(B_AB07CM,{icon:myIcon});
-  B_AB07CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_7hd.png");});
+  B_AB07CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_7hd.png","A07");});
   var B_AB08CMkr = new BMap.Marker(B_AB08CM,{icon:myIcon});
-  B_AB08CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_8hd.png");});
+  B_AB08CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_8hd.png","A08");});
   var B_AB09CMkr = new BMap.Marker(B_AB09CM,{icon:myIcon});
-  B_AB09CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_9hd.png");});
+  B_AB09CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_9hd.png","A09");});
   var B_AB10CMkr = new BMap.Marker(B_AB10CM,{icon:myIcon});
-  B_AB10CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_10hd.png");});
+  B_AB10CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_A_10hd.png","A10");});
 
   var B_BB01CMkr = new BMap.Marker(B_BB01CM,{icon:myIcon});
-  B_BB01CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_B_1hd.png");});
+  B_BB01CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_B_1hd.png","B01");});
   var B_BB02CMkr = new BMap.Marker(B_BB02CM,{icon:myIcon});
-  B_BB02CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_B_3hd.png");});
+  B_BB02CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_B_3hd.png","B02");});
   var B_BB03CMkr = new BMap.Marker(B_BB03CM,{icon:myIcon});
-  B_BB03CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_B_2hd.png");});
-
+  B_BB03CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_B_2hd.png","B03");});
 
   var B_CB01CMkr = new BMap.Marker(B_CB01CM,{icon:myIcon});
-  B_CB01CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_C_1hd.png");});
+  B_CB01CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_C_1hd.png","C01");});
   var B_CB02CMkr = new BMap.Marker(B_CB02CM,{icon:myIcon});
-  B_CB02CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_C_2hd.png");});
+  B_CB02CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_C_2hd.png","C02");});
   var B_CB03CMkr = new BMap.Marker(B_CB03CM,{icon:myIcon});
-  B_CB03CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_C_3hd.png");});
+  B_CB03CMkr.addEventListener("click",function(){show_hd("/assets/demo/hd/Demo_Block_Boluo_C_3hd.png","C03");});
 
   var markers = [];
   markers.push(B_AB01CMkr);
@@ -504,11 +503,228 @@
   }
 
 
-  function show_hd(hdimageurl){
+  function show_hd(hdimageurl,Bid){
     var hdimg = document.getElementById("hdimg");
     hdimg.src = hdimageurl;
     document.getElementById("hdmap").style.display="block";
     document.getElementById("allmap").style.display="none";
+
+    switch (Bid){
+
+      case "A01":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A01";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.129632";
+        document.getElementById("hdcordS").innerHTML = "S:23.127825";
+        document.getElementById("hdcordW").innerHTML = "W:114.203604";
+        document.getElementById("hdcordE").innerHTML = "E:114.205437";
+        document.getElementById("hdm2").innerHTML = "面积:22388㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:鱼塘";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+      case "A02":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A02";
+        document.getElementById("hdmapinfo-status").className = "alert alert-warning";
+        document.getElementById("hdmapinfo-status").innerHTML = "异常";
+        document.getElementById("hdcordN").innerHTML = "N:23.130986";
+        document.getElementById("hdcordS").innerHTML = "S:23.128963";
+        document.getElementById("hdcordW").innerHTML = "W:114.204368";
+        document.getElementById("hdcordE").innerHTML = "E:114.206205";
+        document.getElementById("hdm2").innerHTML = "面积:22490㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:鱼塘";
+        document.getElementById("hdinfo").innerHTML = "信息:地块北侧,路南房东鱼塘水质异常";
+        break;
+      case "A03":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A03";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.129466";
+        document.getElementById("hdcordS").innerHTML = "S:23.128465";
+        document.getElementById("hdcordW").innerHTML = "W:114.205181";
+        document.getElementById("hdcordE").innerHTML = "E:114.206744";
+        document.getElementById("hdm2").innerHTML = "面积:9672㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:鱼塘";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+      case "A04":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A04";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.131942";
+        document.getElementById("hdcordS").innerHTML = "S:23.129457";
+        document.getElementById("hdcordW").innerHTML = "W:114.205688";
+        document.getElementById("hdcordE").innerHTML = "E:114.206704";
+        document.getElementById("hdm2").innerHTML = "面积:22272㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:鱼塘";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+      case "A05":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A05";
+        document.getElementById("hdmapinfo-status").className = "alert alert-danger";
+        document.getElementById("hdmapinfo-status").innerHTML = "警告";
+        document.getElementById("hdcordN").innerHTML = "N:23.132678";
+        document.getElementById("hdcordS").innerHTML = "S:23.130434";
+        document.getElementById("hdcordW").innerHTML = "W:114.206838";
+        document.getElementById("hdcordE").innerHTML = "E:114.207903";
+        document.getElementById("hdm2").innerHTML = "面积:22150㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:鱼塘";
+        document.getElementById("hdinfo").innerHTML = "信息:鱼塘干枯";
+        break;
+      case "A06":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A06";
+        document.getElementById("hdmapinfo-status").className = "alert alert-danger";
+        document.getElementById("hdmapinfo-status").innerHTML = "警告";
+        document.getElementById("hdcordN").innerHTML = "N:23.130484";
+        document.getElementById("hdcordS").innerHTML = "S:23.12871";
+        document.getElementById("hdcordW").innerHTML = "W:114.206802";
+        document.getElementById("hdcordE").innerHTML = "E:114.208064";
+        document.getElementById("hdm2").innerHTML = "面积:17347㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:鱼塘";
+        document.getElementById("hdinfo").innerHTML = "信息:南侧鱼塘干枯";
+        break;
+      case "A07":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A07";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.132257";
+        document.getElementById("hdcordS").innerHTML = "S:23.130517";
+        document.getElementById("hdcordW").innerHTML = "W:114.207768";
+        document.getElementById("hdcordE").innerHTML = "E:114.209035";
+        document.getElementById("hdm2").innerHTML = "面积:13460㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:油菜";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+      case "A08":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A08";
+        document.getElementById("hdmapinfo-status").className = "alert alert-danger";
+        document.getElementById("hdmapinfo-status").innerHTML = "警告";
+        document.getElementById("hdcordN").innerHTML = "N:23.132440";
+        document.getElementById("hdcordS").innerHTML = "S:23.131447";
+        document.getElementById("hdcordW").innerHTML = "W:114.207997";
+        document.getElementById("hdcordE").innerHTML = "E:114.209277";
+        document.getElementById("hdm2").innerHTML = "面积:7972㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:油菜";
+        document.getElementById("hdinfo").innerHTML = "信息:整地块土质干硬";
+        //doc
+        break;
+      case "A09":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A09";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.132033";
+        document.getElementById("hdcordS").innerHTML = "S:23.131049";
+        document.getElementById("hdcordW").innerHTML = "W:114.203604";
+        document.getElementById("hdcordE").innerHTML = "E:114.205437";
+        document.getElementById("hdm2").innerHTML = "面积:7111㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:植物";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+      case "A10":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块A10";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.131655";
+        document.getElementById("hdcordS").innerHTML = "S:23.129968";
+        document.getElementById("hdcordW").innerHTML = "W:114.207889";
+        document.getElementById("hdcordE").innerHTML = "E:114.210975";
+        document.getElementById("hdm2").innerHTML = "面积:25123㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:鱼塘";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+
+      case "B01":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块B01";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.126819";
+        document.getElementById("hdcordS").innerHTML = "S:23.125502";
+        document.getElementById("hdcordW").innerHTML = "W:114.204310";
+        document.getElementById("hdcordE").innerHTML = "E:114.206331";
+        document.getElementById("hdm2").innerHTML = "面积:18120㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:谷物";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+      case "B02":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块B02";
+        document.getElementById("hdmapinfo-status").className = "alert alert-warning";
+        document.getElementById("hdmapinfo-status").innerHTML = "异常";
+        document.getElementById("hdcordN").innerHTML = "N:23.125540";
+        document.getElementById("hdcordS").innerHTML = "S:23.124755";
+        document.getElementById("hdcordW").innerHTML = "W:114.204310";
+        document.getElementById("hdcordE").innerHTML = "E:114.205209";
+        document.getElementById("hdm2").innerHTML = "面积:6284㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:谷物";
+        document.getElementById("hdinfo").innerHTML = "信息:农田异常信息";
+        break;
+      case "B03":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块B03";
+        document.getElementById("hdmapinfo-status").className = "alert alert-danger";
+        document.getElementById("hdmapinfo-status").innerHTML = "警告";
+        document.getElementById("hdcordN").innerHTML = "N:23.126013";
+        document.getElementById("hdcordS").innerHTML = "S:23.124755";
+        document.getElementById("hdcordW").innerHTML = "W:114.205743";
+        document.getElementById("hdcordE").innerHTML = "E:114.206637";
+        document.getElementById("hdm2").innerHTML = "面积:7743㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:谷物";
+        document.getElementById("hdinfo").innerHTML = "信息:北侧农田警告信息";
+        break;
+
+      case "C01":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块C01";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.130059";
+        document.getElementById("hdcordS").innerHTML = "S:23.127978";
+        document.getElementById("hdcordW").innerHTML = "W:114.210532";
+        document.getElementById("hdcordE").innerHTML = "E:114.210873";
+        document.getElementById("hdm2").innerHTML = "面积:16193㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:谷物";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+      case "C02":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块C02";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.128593";
+        document.getElementById("hdcordS").innerHTML = "S:23.127625";
+        document.getElementById("hdcordW").innerHTML = "W:114.209611";
+        document.getElementById("hdcordE").innerHTML = "E:114.210572";
+        document.getElementById("hdm2").innerHTML = "面积:4757㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:谷物";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+      case "C03":
+        document.getElementById("hdtitle").innerHTML = "博罗县地块C03";
+        document.getElementById("hdmapinfo-status").className = "alert alert-info";
+        document.getElementById("hdmapinfo-status").innerHTML = "正常";
+        document.getElementById("hdcordN").innerHTML = "N:23.126819";
+        document.getElementById("hdcordS").innerHTML = "S:23.125502";
+        document.getElementById("hdcordW").innerHTML = "W:114.204310";
+        document.getElementById("hdcordE").innerHTML = "E:114.206331";
+        document.getElementById("hdm2").innerHTML = "面积:15831㎡";
+        document.getElementById("hddate").innerHTML = "日期:2016/03/15";
+        document.getElementById("hdproduct").innerHTML = "作物:谷物";
+        document.getElementById("hdinfo").innerHTML = "信息:无";
+        break;
+      default:
+
+    }
 
   }
 </script>
