@@ -1,3 +1,8 @@
+# File Path : /app/controllers/users_controller.rb
+# Changed by Ma Xiaohang(maffee)
+# Controller File User
+# Created by maffee on 16/10/9.
+
 class UsersController < ApplicationController
 
   def new

@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/10/9.
- */
+// File Path : /app/assets/javascripts/leaflet-utils/L.RotatedMarker.js
+// Changed by Ma Xiaohang(maffee)
+// Font End UI
+// Created by maffee on 16/10/9.
 // L.RotatedMarker.js grabbed from bbecquet's PolylineDecorator (https://github.com/bbecquet/Leaflet.PolylineDecorator/blob/master/src/L.RotatedMarker.js)
 
 L.RotatedMarker = L.Marker.extend({

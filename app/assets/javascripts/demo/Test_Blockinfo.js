@@ -1,6 +1,9 @@
-/**
- * Created by maffee on 16/10/14.
- */
+// File Path : /app/assets/javascripts/demo/Test_Blockinfo.js
+// Developed by Ma Xiaohang(maffee)
+// Test Version Blockinfo
+// Created by maffee on 16/10/14.
+
+
 $(function(){
     $('#block_test_A_1').mouseover(function(){
         $('#blockname').text($('#block_test_A_1').text());

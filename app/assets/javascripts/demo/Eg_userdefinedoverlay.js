@@ -1,6 +1,8 @@
-/**
- * Created by maffee on 16/11/8.
- */
+// File Path : /app/assets/javascripts/demo/Eg_userdefineoverlay.js
+// Developed by Ma Xiaohang(maffee)
+// Demo Version Page Userdefine Overlay - SquareOverlay
+// Created by maffee on 16/11/8.
+
 function SquareOverlay(center, length, color){
     this._center = center;
     this._length = length;

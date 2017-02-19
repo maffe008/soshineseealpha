@@ -1,3 +1,6 @@
+# File Path : /config/application.rb
+# Created by maffee on 16/10/9.
+
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'

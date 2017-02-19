@@ -1,3 +1,8 @@
+# File Path : /app/controllers/welcome_controller.rb
+# Changed by Ma Xiaohang(maffee)
+# Controller File Other & Abouts
+# Created by maffee on 16/10/9.
+
 class WelcomeController < ApplicationController
 
   def index

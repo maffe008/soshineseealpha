@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/11/8.
- */
+// File Path : /app/assets/javascripts/demo/Demo_Boluo_ZoneOverlay.js
+// Developed by Ma Xiaohang(maffee)
+// Demo Version ZoneOverlay display Function
+// Created by maffee on 16/11/8.
 /*
 * OutlineOverlay
 * ZoneOverlay       <-----

@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/10/9.
- */
+// File Path : /app/assets/javascripts/leaflet/leaflet-src
+// Changed by Ma Xiaohang(maffee)
+// Font End UI
+// Created by maffee on 16/10/9.
 /*
  Leaflet, a JavaScript library for mobile-friendly interactive maps. http://leafletjs.com
  (c) 2010-2013, Vladimir Agafonkin

@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/10/9.
- */
+// File Path : /app/assets/javascripts/leaflet.draw/leaflet.draw
+// Changed by Ma Xiaohang(maffee)
+// Font End UI
+// Created by maffee on 16/10/9.
 /*
  * https://github.com/Leaflet/Leaflet.draw/commit/d268c4fdf552f5f4237b2bbc46b9c02cc4e47bb8#diff-6bbba8fb72ed2aeca3f703c29a2bb172
  Leaflet.draw, a plugin that adds drawing and editing tools to Leaflet powered maps.

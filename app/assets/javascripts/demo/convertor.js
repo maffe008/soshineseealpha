@@ -1,7 +1,8 @@
-/**
- * Created by maffee on 16/10/25.
- */
-//2011-7-25
+// File Path : /app/assets/javascripts/demo/convertor.js
+// Developed by Ma Xiaohang(maffee)
+// Alpha Version Overlay display convertor Function
+// Created by maffee on 16/11/10.
+
 (function(){        //闭包
     function load_script(xyUrl, callback){
         var head = document.getElementsByTagName('head')[0];

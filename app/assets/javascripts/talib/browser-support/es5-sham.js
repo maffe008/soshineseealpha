@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/10/9.
- */
+// File Path : /app/assets/javascripts/browser-support/es5-sham.js
+// Changed by Ma Xiaohang(maffee)
+// Font End UI
+// Created by maffee on 16/10/9.
 /*!
  * https://github.com/es-shims/es5-shim
  * @license es5-shim Copyright 2009-2014 by contributors, MIT License

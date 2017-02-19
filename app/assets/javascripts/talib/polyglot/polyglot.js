@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/10/9.
- */
+// File Path : /app/assets/javascripts/polyglot/polyglot.js
+// Changed by Ma Xiaohang(maffee)
+// Font End UI
+// Created by maffee on 16/10/9.
 //     (c) 2012 Airbnb, Inc.
 //
 //     polyglot.js may be freely distributed under the terms of the BSD

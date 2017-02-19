@@ -1,7 +1,7 @@
-/**
- * Created by maffee on 16/10/26.
- */
-
+// File Path : /app/assets/javascripts/demo/Alpha_Boluo_Blockinfo.js
+// Developed by Ma Xiaohang(maffee)
+// Alpha Version Blockinfo display Function
+// Created by maffee on 16/10/26.
 
 $(function(){
     $('#boluo_block_A_all').mouseover(function(){

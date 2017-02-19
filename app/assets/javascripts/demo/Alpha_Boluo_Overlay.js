@@ -1,9 +1,7 @@
-/**
- * Created by maffee on 16/10/26.
- */
-
-
-
+// File Path : /app/assets/javascripts/demo/Alpha_Boluo_Overlay.js
+// Developed by Ma Xiaohang(maffee)
+// Alpha Version Overlay display Function
+// Created by maffee on 16/10/26.
 
 
 function focus_boluo_A(){

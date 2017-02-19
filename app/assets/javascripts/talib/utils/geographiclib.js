@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/10/9.
- */
+// File Path : /app/assets/javascripts/utils/geographiclib.js
+// Changed by Ma Xiaohang(maffee)
+// Font End UI
+// Created by maffee on 16/10/9.
 /*
  * Geodesic routines from GeographicLib translated to JavaScript.  For
  * more information, see

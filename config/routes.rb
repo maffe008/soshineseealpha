@@ -1,3 +1,6 @@
+# File Path : /config/routes.rb
+# Created by maffee on 16/10/9.
+
 Rails.application.routes.draw do
   resources :users
 

@@ -1,4 +1,6 @@
-//全局JavaScript文件
+// File Path : /app/assets/javascripts/application.js
+// Developed by Ma Xiaohang (maffee)
+// 全局JavaScript配置文件
 
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.

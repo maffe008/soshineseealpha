@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/10/9.
- */
+// File Path : /app/assets/javascripts/maps/i18n.js
+// Changed by Ma Xiaohang(maffee)
+// Font End UI
+// Created by maffee on 16/10/9.
 
 // var cookieLocale = document.cookie.replace(/(?:(?:^|.*;\s*)taUserLocale\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 var i18nStructure = {}

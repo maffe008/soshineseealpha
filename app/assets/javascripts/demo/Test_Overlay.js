@@ -1,8 +1,7 @@
-/**
- * Created by maffee on 16/10/16.
- */
-
-
+// File Path : /app/assets/javascripts/demo/Test_Overlay.js
+// Developed by Ma Xiaohang(maffee)
+// Test Version Overlay
+// Created by maffee on 16/10/16.
 
 
 polygonOptions_under = {

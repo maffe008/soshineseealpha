@@ -1,3 +1,6 @@
+# File Path : /config/environment/development.rb
+# Created by maffee on 16/10/9.
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 

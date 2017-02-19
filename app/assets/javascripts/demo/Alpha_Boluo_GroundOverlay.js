@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/11/10.
- */
+// File Path : /app/assets/javascripts/demo/Alpha_Boluo_GroundOverlay.js
+// Developed by Ma Xiaohang(maffee)
+// Alpha Version Groundinfo display Function
+// Created by maffee on 16/11/10.
 
 function btn_nc(){
 

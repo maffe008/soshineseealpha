@@ -1,6 +1,7 @@
-/**
- * Created by maffee on 16/11/8.
- */
+// File Path : /app/assets/javascripts/demo/M_ZoneOverlay.js
+// Developed by Ma Xiaohang(maffee)
+// Demo Version My Zone Overlay
+// Created by maffee on 16/11/8.
 
 //Maffee Define ZoneOverlay
 
